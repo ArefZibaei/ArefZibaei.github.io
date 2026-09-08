@@ -1,1 +1,1461 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="پلتفرم آموزش، خدمات، ابزارها، داده و فناوری کشاورزی"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#173f2a"
+  >
+
+  <title>آگروتک | آموزش و فناوری کشاورزی</title>
+
+  <style>
+    :root {
+      --green-950: #0d2417;
+      --green-900: #123521;
+      --green-800: #17472b;
+      --green-700: #1d633a;
+      --green-600: #27804a;
+      --green-100: #e6f3e9;
+      --green-50: #f2f8f3;
+
+      --text: #17231b;
+      --muted: #5f6d63;
+      --border: #dfe8e1;
+      --white: #ffffff;
+      --background: #f7faf7;
+
+      --shadow-sm:
+        0 6px 20px rgba(18, 53, 33, 0.06);
+
+      --shadow-md:
+        0 16px 45px rgba(18, 53, 33, 0.10);
+
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 26px;
+
+      --container: 1180px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid #79b88c;
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(
+        var(--container),
+        calc(100% - 36px)
+      );
+      margin-inline: auto;
+    }
+
+    /* =========================
+       Header
+    ========================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.94);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      font-size: 22px;
+      font-weight: 900;
+
+      color: var(--green-700);
+
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.7;
+      direction: ltr;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      gap: 22px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .nav-list a {
+      color: #3f4d44;
+      font-size: 14px;
+      font-weight: 600;
+
+      transition:
+        color 0.2s ease;
+    }
+
+    .nav-list a:hover {
+      color: var(--green-700);
+    }
+
+    /* =========================
+       Hero
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      padding:
+        92px
+        0
+        86px;
+
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(166, 213, 175, 0.42),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #eef8ef 0%,
+          #ffffff 65%
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(300px, 0.75fr);
+
+      align-items: center;
+
+      gap: 58px;
+    }
+
+    .badge {
+      display: inline-flex;
+
+      padding:
+        7px
+        13px;
+
+      border:
+        1px solid #cce5d1;
+
+      border-radius: 999px;
+
+      background: var(--green-100);
+      color: var(--green-700);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      direction: ltr;
+    }
+
+    .hero h1 {
+      margin:
+        18px
+        0
+        20px;
+
+      max-width: 780px;
+
+      font-size:
+        clamp(34px, 6vw, 64px);
+
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 strong {
+      color: var(--green-700);
+    }
+
+    .hero-description {
+      max-width: 720px;
+
+      margin: 0 0 30px;
+
+      color: var(--muted);
+
+      font-size:
+        clamp(16px, 2vw, 19px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding:
+        11px
+        20px;
+
+      border-radius:
+        var(--radius-sm);
+
+      border:
+        1px solid transparent;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--green-700);
+      color: var(--white);
+
+      box-shadow:
+        0 10px 25px
+        rgba(29, 99, 58, 0.18);
+    }
+
+    .button-primary:hover {
+      background: var(--green-800);
+    }
+
+    .button-secondary {
+      background: var(--white);
+      color: var(--green-700);
+
+      border-color:
+        #cfe0d3;
+    }
+
+    .hero-panel {
+      padding: 30px;
+
+      background:
+        rgba(255, 255, 255, 0.96);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-lg);
+
+      box-shadow:
+        var(--shadow-md);
+    }
+
+    .hero-panel-title {
+      margin: 0 0 18px;
+
+      color: var(--green-700);
+
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .feature-list {
+      display: grid;
+
+      gap: 10px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      padding:
+        10px
+        0;
+
+      border-bottom:
+        1px solid #edf2ee;
+
+      color: #3e4c43;
+
+      font-size: 14px;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .feature-icon {
+      display: grid;
+      place-items: center;
+
+      flex: 0 0 36px;
+
+      width: 36px;
+      height: 36px;
+
+      border-radius: 10px;
+
+      background: var(--green-100);
+
+      font-size: 17px;
+    }
+
+    /* =========================
+       Sections
+    ========================== */
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+
+      margin:
+        0
+        auto
+        45px;
+
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 9px;
+
+      font-size:
+        clamp(28px, 4vw, 38px);
+
+      line-height: 1.4;
+    }
+
+    .section-heading p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       Cards
+    ========================== */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 20px;
+    }
+
+    .card {
+      padding: 26px;
+
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      box-shadow:
+        var(--shadow-sm);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+
+      border-color:
+        #c9ddcd;
+
+      box-shadow:
+        var(--shadow-md);
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+
+      width: 52px;
+      height: 52px;
+
+      margin-bottom: 17px;
+
+      border-radius: 15px;
+
+      background: var(--green-100);
+
+      font-size: 25px;
+    }
+
+    .card h3 {
+      margin:
+        0
+        0
+        8px;
+
+      font-size: 19px;
+    }
+
+    .card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       Services
+    ========================== */
+
+    .services {
+      background: var(--white);
+    }
+
+    /* =========================
+       Tools
+    ========================== */
+
+    .tools {
+      background: var(--green-50);
+    }
+
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 210px;
+
+      padding: 26px;
+
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+    }
+
+    .tool-card h3 {
+      margin:
+        0
+        0
+        8px;
+
+      font-size: 19px;
+    }
+
+    .tool-card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    .coming-soon {
+      display: inline-flex;
+
+      align-self: flex-start;
+
+      margin-top: auto;
+      padding:
+        6px
+        11px;
+
+      border-radius: 999px;
+
+      background: #eef3ef;
+      color: #536158;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       Roadmap
+    ========================== */
+
+    .roadmap {
+      background: var(--white);
+    }
+
+    .roadmap-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 16px;
+    }
+
+    .roadmap-item {
+      padding: 23px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      background: #fbfdfb;
+    }
+
+    .roadmap-number {
+      display: inline-grid;
+      place-items: center;
+
+      width: 34px;
+      height: 34px;
+
+      margin-bottom: 13px;
+
+      border-radius: 10px;
+
+      background: var(--green-700);
+      color: var(--white);
+
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .roadmap-item h3 {
+      margin:
+        0
+        0
+        7px;
+
+      font-size: 17px;
+    }
+
+    .roadmap-item p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       About
+    ========================== */
+
+    .about {
+      background:
+        linear-gradient(
+          135deg,
+          var(--green-950),
+          var(--green-800)
+        );
+
+      color: var(--white);
+    }
+
+    .about-content {
+      max-width: 850px;
+
+      margin-inline: auto;
+
+      text-align: center;
+    }
+
+    .about-content h2 {
+      margin: 0 0 15px;
+
+      font-size:
+        clamp(28px, 4vw, 40px);
+    }
+
+    .about-content p {
+      margin:
+        0
+        auto
+        28px;
+
+      color: #d7e5da;
+
+      font-size: 16px;
+    }
+
+    /* =========================
+       Contact
+    ========================== */
+
+    .contact-box {
+      max-width: 720px;
+
+      margin-inline: auto;
+
+      padding: 30px;
+
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      box-shadow:
+        var(--shadow-sm);
+
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       Footer
+    ========================== */
+
+    footer {
+      padding:
+        28px
+        0;
+
+      background: #09170e;
+
+      color: #b8c6bc;
+
+      text-align: center;
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       Responsive
+    ========================== */
+
+    @media (max-width: 950px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .roadmap-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(
+          100% - 28px,
+          var(--container)
+        );
+      }
+
+      .site-header {
+        position: relative;
+      }
+
+      .nav {
+        min-height: auto;
+
+        padding:
+          16px
+          0;
+
+        flex-direction: column;
+
+        gap: 14px;
+      }
+
+      .nav-list {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 15px;
+      }
+
+      .hero {
+        padding:
+          62px
+          0
+          58px;
+      }
+
+      section {
+        padding:
+          62px
+          0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .roadmap-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-panel {
+        padding: 23px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="منوی اصلی">
+
+        <a
+          class="brand"
+          href="#home"
+          aria-label="آگروتک"
+        >
+          آگروتک
+          <span>AgroTech</span>
+        </a>
+
+        <ul class="nav-list">
+          <li>
+            <a href="#home">خانه</a>
+          </li>
+
+          <li>
+            <a href="#education">آموزش</a>
+          </li>
+
+          <li>
+            <a href="#services">خدمات</a>
+          </li>
+
+          <li>
+            <a href="#tools">ابزارها</a>
+          </li>
+
+          <li>
+            <a href="#roadmap">مسیر توسعه</a>
+          </li>
+
+          <li>
+            <a href="#about">درباره</a>
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="home">
+
+    <!-- Hero -->
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div>
+
+            <span class="badge">
+              AGRICULTURE • DATA • AI • TECHNOLOGY
+            </span>
+
+            <h1>
+              دانش و فناوری
+              <br>
+              برای
+              <strong>کشاورزی مدرن</strong>
+            </h1>
+
+            <p class="hero-description">
+              یک زیرساخت دیجیتال برای آموزش کشاورزی،
+              خدمات تخصصی، ابزارهای کاربردی،
+              داده، فناوری و راهکارهای هوشمند.
+            </p>
+
+            <div class="hero-actions">
+
+              <a
+                class="button button-primary"
+                href="#education"
+              >
+                شروع یادگیری
+              </a>
+
+              <a
+                class="button button-secondary"
+                href="#tools"
+              >
+                مشاهده ابزارها
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <aside
+            class="hero-panel"
+            aria-label="قابلیت‌های پلتفرم"
+          >
+
+            <h2 class="hero-panel-title">
+              این پلتفرم چه خواهد داشت؟
+            </h2>
+
+            <ul class="feature-list">
+
+              <li>
+                <span class="feature-icon">🌱</span>
+                آموزش تخصصی کشاورزی
+              </li>
+
+              <li>
+                <span class="feature-icon">📊</span>
+                تحلیل داده‌های کشاورزی
+              </li>
+
+              <li>
+                <span class="feature-icon">🧮</span>
+                ابزار و محاسبات کاربردی
+              </li>
+
+              <li>
+                <span class="feature-icon">🤖</span>
+                هوش مصنوعی کشاورزی
+              </li>
+
+              <li>
+                <span class="feature-icon">🔗</span>
+                خدمات و سیستم‌های دیجیتال
+              </li>
+
+            </ul>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Education -->
+
+    <section id="education">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>آموزش کشاورزی</h2>
+
+          <p>
+            دانش علمی و کاربردی برای تولید بهتر،
+            مدیریت بهتر و تصمیم‌گیری دقیق‌تر.
+          </p>
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card">
+
+            <div class="card-icon">🌳</div>
+
+            <h3>
+              باغبانی و پسته
+            </h3>
+
+            <p>
+              مدیریت باغ، تغذیه، آبیاری،
+              هرس، آفات و بیماری‌ها
+              و تولید پسته.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🌾</div>
+
+            <h3>
+              زراعت
+            </h3>
+
+            <p>
+              اصول تولید محصولات زراعی،
+              مدیریت مزرعه و افزایش بهره‌وری.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🏡</div>
+
+            <h3>
+              گلخانه
+            </h3>
+
+            <p>
+              مدیریت اقلیم، تغذیه،
+              آبیاری و تولید محصولات گلخانه‌ای.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🌸</div>
+
+            <h3>
+              زعفران
+            </h3>
+
+            <p>
+              کاشت، داشت، برداشت،
+              تغذیه و مدیریت مزرعه زعفران.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🐛</div>
+
+            <h3>
+              آفات و بیماری‌ها
+            </h3>
+
+            <p>
+              شناسایی و مدیریت آفات،
+              بیماری‌ها و کنترل تلفیقی.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🔬</div>
+
+            <h3>
+              مقالات علمی
+            </h3>
+
+            <p>
+              محتوای علمی، پژوهشی و
+              کاربردی در حوزه کشاورزی.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Services -->
+
+    <section
+      class="services"
+      id="services"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>
+            خدمات دیجیتال کشاورزی
+          </h2>
+
+          <p>
+            زیرساخت خدمات تخصصی که در نسخه‌های
+            بعدی به سیستم واقعی متصل خواهد شد.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card">
+
+            <div class="card-icon">👨‍🌾</div>
+
+            <h3>
+              مشاوره کشاورزی
+            </h3>
+
+            <p>
+              توسعه خدمات مشاوره تخصصی
+              برای باغ، مزرعه و گلخانه.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">📈</div>
+
+            <h3>
+              تحلیل و محاسبات
+            </h3>
+
+            <p>
+              استفاده از داده‌ها برای محاسبه،
+              تحلیل و تصمیم‌گیری بهتر.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">🤖</div>
+
+            <h3>
+              دستیار هوشمند کشاورزی
+            </h3>
+
+            <p>
+              توسعه دستیار هوش مصنوعی
+              برای پاسخ‌گویی و تحلیل مسائل کشاورزی.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Tools -->
+
+    <section
+      class="tools"
+      id="tools"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>
+            ابزارهای کاربردی
+          </h2>
+
+          <p>
+            ابزارهای واقعی را مرحله‌به‌مرحله
+            به این پلتفرم اضافه خواهیم کرد.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <article class="tool-card">
+
+            <h3>
+              💧 محاسبه آب
+            </h3>
+
+            <p>
+              محاسبه نیاز آبی،
+              پارامترهای آبیاری
+              و شاخص‌های مرتبط.
+            </p>
+
+            <span class="coming-soon">
+              در حال توسعه
+            </span>
+
+          </article>
+
+
+          <article class="tool-card">
+
+            <h3>
+              🧪 محاسبات کود
+            </h3>
+
+            <p>
+              ابزار محاسبه مقدار کود
+              و برنامه تغذیه گیاه.
+            </p>
+
+            <span class="coming-soon">
+              در حال توسعه
+            </span>
+
+          </article>
+
+
+          <article class="tool-card">
+
+            <h3>
+              📊 تحلیل داده مزرعه
+            </h3>
+
+            <p>
+              تحلیل عملکرد،
+              تولید و داده‌های مزرعه
+              برای تصمیم‌گیری بهتر.
+            </p>
+
+            <span class="coming-soon">
+              در حال توسعه
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Roadmap -->
+
+    <section id="roadmap">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>
+            مسیر توسعه پلتفرم
+          </h2>
+
+          <p>
+            سایت را از یک نسخه ساده شروع می‌کنیم
+            و مرحله‌به‌مرحله به یک اکوسیستم دیجیتال
+            کشاورزی تبدیل می‌کنیم.
+          </p>
+
+        </div>
+
+
+        <div class="roadmap-grid">
+
+          <article class="roadmap-item">
+
+            <span class="roadmap-number">
+              01
+            </span>
+
+            <h3>
+              محتوا و آموزش
+            </h3>
+
+            <p>
+              مقالات، آموزش‌ها،
+              دسته‌بندی تخصصی و پایگاه دانش.
+            </p>
+
+          </article>
+
+
+          <article class="roadmap-item">
+
+            <span class="roadmap-number">
+              02
+            </span>
+
+            <h3>
+              ابزارهای کشاورزی
+            </h3>
+
+            <p>
+              محاسبه آب، کود،
+              تغذیه و تحلیل داده.
+            </p>
+
+          </article>
+
+
+          <article class="roadmap-item">
+
+            <span class="roadmap-number">
+              03
+            </span>
+
+            <h3>
+              داده و حساب کاربری
+            </h3>
+
+            <p>
+              دیتابیس، حساب کاربران،
+              ذخیره اطلاعات و API.
+            </p>
+
+          </article>
+
+
+          <article class="roadmap-item">
+
+            <span class="roadmap-number">
+              04
+            </span>
+
+            <h3>
+              AI و اتوماسیون
+            </h3>
+
+            <p>
+              دستیار هوشمند،
+              تحلیل داده و اتوماسیون خدمات.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
+      <div class="container">
+
+        <div class="about-content">
+
+          <h2>
+            کشاورزی، داده و فناوری
+          </h2>
+
+          <p>
+            هدف این پلتفرم ایجاد یک زیرساخت
+            قابل توسعه برای آموزش، خدمات،
+            داده، نرم‌افزار و هوش مصنوعی
+            در حوزه کشاورزی است.
+          </p>
+
+          <a
+            class="button button-secondary"
+            href="#contact"
+          >
+            ادامه مسیر
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>
+            ارتباط با ما
+          </h2>
+
+          <p>
+            سیستم ارتباط با کاربران را در
+            نسخه‌های بعدی به سایت اضافه می‌کنیم.
+          </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+          <p>
+            این نسخه، هسته اولیه پلتفرم است.
+            امکانات تعاملی، حساب کاربری،
+            پایگاه داده و خدمات آنلاین
+            در مراحل بعدی اضافه خواهند شد.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 AgroTech
+      |
+      Agriculture • Data • AI • Technology
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
