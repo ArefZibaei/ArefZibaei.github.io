@@ -1,65 +1,1969 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="کشت‌نگار؛ پلتفرم دانش، مزرعه، خدمات، بازار و هوش مصنوعی کشاورزی.">
-<meta name="theme-color" content="#07140f"><meta name="color-scheme" content="dark light">
-<title>کشت‌نگار | دانش و فناوری کشاورزی</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>JAMINTRA | جامینترا | Agriculture • Data • AI • Technology</title>
+
+<meta name="description" content="جامینترا؛ زیرساخت دانش، داده، هوش مصنوعی و فناوری برای کشاورزی مدرن، با تمرکز بر باغبانی، پسته، زعفران، گلخانه و کشاورزی داده‌محور.">
+
+<meta name="robots" content="index,follow">
+
+<meta name="theme-color" content="#07130e">
+
+<meta name="author" content="Aref Zibaei Rad">
+
+<link rel="canonical" href="https://arefzibaei.github.io/">
+
 <style>
-:root{--bg:#07140f;--bg2:#0b2118;--s:rgba(255,255,255,.075);--s2:rgba(255,255,255,.11);--line:rgba(255,255,255,.13);--t:#f5faf7;--m:#b7c9bf;--g:#6ee7a0;--g2:#2bb673;--gold:#f3c969;--max:1180px;--r:24px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(900px 500px at 90% -10%,rgba(43,182,115,.2),transparent 60%),radial-gradient(700px 450px at 5% 15%,rgba(243,201,105,.09),transparent 60%),var(--bg);color:var(--t);font-family:Tahoma,"Vazirmatn",Arial,sans-serif;line-height:1.9}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}.glass{background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.045));border:1px solid var(--line);box-shadow:0 24px 80px rgba(0,0,0,.25);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}.skip{position:absolute;top:-60px;right:12px;background:#fff;color:#111;padding:10px 14px;border-radius:10px;z-index:9999}.skip:focus{top:12px}
-header{position:sticky;top:0;z-index:1000;background:rgba(7,20,15,.76);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;white-space:nowrap}.mark{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--g),var(--g2));color:#062013;box-shadow:0 10px 30px rgba(43,182,115,.28);font-size:21px}.brand small{display:block;color:var(--m);font-size:10px;font-weight:700;direction:ltr}.navlinks{display:flex;gap:6px;align-items:center;list-style:none;padding:0;margin:0}.navlinks a{padding:9px 11px;border-radius:12px;color:#d7e4dc;font-size:13px}.navlinks a:hover{background:var(--s);color:#fff}.navcta{display:flex;gap:8px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:9px 15px;border-radius:13px;border:1px solid var(--line);font-weight:800;font-size:13px}.primary{background:linear-gradient(135deg,var(--g),#38c786);color:#052015;border:0}.ghost{background:rgba(255,255,255,.055);color:#fff}.hero{padding:82px 0 70px;position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border-radius:999px;background:rgba(110,231,160,.09);border:1px solid rgba(110,231,160,.24);color:#baf7d0;font-size:11px;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 18px var(--g)}h1{font-size:clamp(38px,6vw,70px);line-height:1.18;letter-spacing:-1.8px;margin:18px 0}h1 span{color:var(--g)}.lead{color:var(--m);font-size:clamp(16px,2vw,19px);max-width:720px;margin:0 0 26px}.actions{display:flex;gap:10px;flex-wrap:wrap}.trust{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;color:#9fb4a8;font-size:11px}.hero-card{padding:20px;border-radius:28px;overflow:hidden}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.panel-title{font-weight:900}.status{font-size:10px;padding:5px 8px;border-radius:999px;background:rgba(110,231,160,.11);color:#aaf2c4;border:1px solid rgba(110,231,160,.22)}.field{padding:16px;border-radius:20px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.09)}.fieldtop{display:flex;justify-content:space-between;align-items:center}.field h3{margin:0;font-size:18px}.mini{font-size:11px;color:var(--m)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.metric{padding:12px;border-radius:15px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08)}.metric b{display:block;font-size:17px}.metric small{color:var(--m);font-size:9px}.ai{margin-top:10px;padding:13px;border-radius:16px;background:linear-gradient(135deg,rgba(110,231,160,.12),rgba(243,201,105,.07));border:1px solid rgba(110,231,160,.17);font-size:11px;color:#d8e9df}.section{padding:76px 0}.alt{background:rgba(255,255,255,.025);border-block:1px solid rgba(255,255,255,.055)}.head{max-width:760px;margin:0 auto 38px;text-align:center}.kicker{color:var(--g);font-size:11px;font-weight:900}.head h2{font-size:clamp(27px,4vw,42px);line-height:1.35;margin:8px 0}.head p{color:var(--m);margin:0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border-radius:22px}.icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:rgba(110,231,160,.1);border:1px solid rgba(110,231,160,.16);font-size:23px;margin-bottom:14px}.card h3{margin:0 0 7px;font-size:18px}.card p{margin:0;color:var(--m);font-size:13px}.pill{display:inline-block;margin-top:16px;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:9px;color:#cbd9d1}.market{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.market-visual{min-height:370px;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.72)),url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1400&q=82') center/cover}.market-visual>div{position:absolute;right:20px;left:20px;bottom:20px}.market-visual strong{font-size:25px;display:block}.list{display:grid;gap:11px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border-radius:18px}.left{display:flex;gap:12px;align-items:center}.thumb{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:22px}.row h4{margin:0;font-size:14px}.row p{margin:2px 0 0;color:var(--m);font-size:10px}.price{font-weight:900;color:#dffbe9;font-size:13px}.knowledge{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.article{padding:22px;border-radius:24px}.tag{font-size:9px;color:#aaf2c4}.article h3{margin:8px 0;font-size:21px}.article p{color:var(--m);font-size:13px}.sources{display:grid;gap:10px}.source{padding:15px;border-radius:17px}.source b{font-size:12px}.source span{display:block;color:var(--m);font-size:10px;margin-top:3px}.modules{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.module{padding:19px;border-radius:20px}.module strong{display:block;margin-bottom:4px}.module span{font-size:10px;color:var(--m)}.road{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:20px;border-radius:20px}.num{font-size:11px;color:var(--g);font-weight:900}.step h3{margin:6px 0;font-size:16px}.step p{margin:0;color:var(--m);font-size:11px}.cta{padding:38px;border-radius:30px;text-align:center;background:linear-gradient(135deg,rgba(110,231,160,.13),rgba(243,201,105,.07));border:1px solid rgba(110,231,160,.18)}.cta h2{margin:0 0 8px;font-size:30px}.cta p{margin:0 auto 18px;color:var(--m);max-width:650px;font-size:13px}.contact{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}footer{padding:30px 0;color:#8da097;font-size:10px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.mobilebar{display:none}
-@media(max-width:900px){.hero-grid,.market,.knowledge{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,1fr)}.modules,.road{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.mobilebar{display:flex;position:fixed;bottom:12px;left:12px;right:12px;z-index:1100;justify-content:space-around;padding:8px;border-radius:18px;background:rgba(7,20,15,.84);border:1px solid var(--line);backdrop-filter:blur(18px)}.mobilebar a{font-size:10px;color:#c9d8d0;padding:7px 10px}.hero{padding-top:55px}}
-@media(max-width:600px){.wrap{width:min(100% - 22px,var(--max))}.brand small{display:none}.navcta .ghost{display:none}.hero{padding:45px 0 52px}h1{font-size:42px}.actions .btn{width:100%}.section{padding:56px 0}.grid3,.modules,.road{grid-template-columns:1fr}.market-visual{min-height:280px}.cta{padding:28px 18px}.cta h2{font-size:24px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-</style></head>
+
+:root{
+  --bg:#06100b;
+  --bg2:#0a1911;
+  --panel:rgba(255,255,255,.075);
+  --panel2:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.13);
+  --text:#f5faf7;
+  --muted:#aebfb5;
+  --green:#63e6a0;
+  --green2:#21a967;
+  --gold:#e8c76b;
+  --blue:#70b7ff;
+  --max:1240px;
+  --radius:26px;
+  --shadow:0 25px 80px rgba(0,0,0,.28);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 90% -10%,rgba(33,169,103,.20),transparent 65%),
+    radial-gradient(800px 500px at 0% 20%,rgba(232,199,107,.08),transparent 65%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif;
+  line-height:1.9;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+::selection{
+  background:var(--green);
+  color:#04130b;
+}
+
+:focus-visible{
+  outline:3px solid var(--green);
+  outline-offset:4px;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 34px));
+  margin:auto;
+}
+
+.glass{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.105),
+      rgba(255,255,255,.035)
+    );
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+.skip{
+  position:absolute;
+  top:-80px;
+  right:15px;
+  z-index:9999;
+  background:#fff;
+  color:#111;
+  padding:10px 15px;
+  border-radius:10px;
+}
+
+.skip:focus{
+  top:15px;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(6,16,11,.78);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:900;
+}
+
+.logo{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#04130b;
+  font-size:22px;
+  box-shadow:0 12px 35px rgba(33,169,103,.30);
+}
+
+.brand-title{
+  font-size:18px;
+}
+
+.brand-sub{
+  display:block;
+  direction:ltr;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.navlinks a{
+  padding:9px 12px;
+  border-radius:12px;
+  color:#cbd9d1;
+  font-size:12px;
+}
+
+.navlinks a:hover{
+  background:var(--panel);
+  color:#fff;
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:45px;
+  padding:10px 16px;
+  border-radius:13px;
+  border:1px solid var(--line);
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--green),#3ac985);
+  color:#04130b;
+  border:0;
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.055);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:90px 0 75px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border-radius:999px;
+  color:#b9f5d0;
+  background:rgba(99,230,160,.08);
+  border:1px solid rgba(99,230,160,.20);
+  font-size:10px;
+  font-weight:900;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 18px var(--green);
+}
+
+h1{
+  margin:20px 0;
+  font-size:clamp(42px,6.5vw,76px);
+  line-height:1.18;
+  letter-spacing:-2px;
+}
+
+h1 span{
+  color:var(--green);
+}
+
+.hero-text{
+  max-width:760px;
+  color:var(--muted);
+  font-size:clamp(16px,2vw,19px);
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+}
+
+.hero-trust{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:25px;
+  color:#91a79b;
+  font-size:10px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+  padding:21px;
+  border-radius:30px;
+}
+
+.dashboard-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.dashboard-title{
+  font-weight:900;
+}
+
+.status{
+  padding:5px 9px;
+  border-radius:999px;
+  color:#aaf2c4;
+  background:rgba(99,230,160,.09);
+  border:1px solid rgba(99,230,160,.18);
+  font-size:9px;
+}
+
+.field{
+  padding:18px;
+  border-radius:22px;
+  background:rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.field-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.field h3{
+  margin:0;
+  font-size:20px;
+}
+
+.muted{
+  color:var(--muted);
+  font-size:10px;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:13px;
+}
+
+.metric{
+  padding:12px;
+  border-radius:15px;
+  background:rgba(255,255,255,.05);
+}
+
+.metric strong{
+  display:block;
+  font-size:18px;
+}
+
+.metric span{
+  color:var(--muted);
+  font-size:9px;
+}
+
+.ai-box{
+  margin-top:11px;
+  padding:14px;
+  border-radius:17px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(99,230,160,.11),
+      rgba(232,199,107,.07)
+    );
+  border:1px solid rgba(99,230,160,.16);
+  color:#d8e8df;
+  font-size:10px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:85px 0;
+}
+
+.alt{
+  background:rgba(255,255,255,.025);
+  border-block:1px solid rgba(255,255,255,.055);
+}
+
+.section-head{
+  max-width:780px;
+  margin:0 auto 42px;
+  text-align:center;
+}
+
+.kicker{
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.section-head h2{
+  margin:8px 0;
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.35;
+}
+
+.section-head p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.card{
+  padding:25px;
+  border-radius:23px;
+  transition:
+    transform .2s ease,
+    border-color .2s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(99,230,160,.32);
+}
+
+.icon{
+  width:51px;
+  height:51px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  background:rgba(99,230,160,.09);
+  border:1px solid rgba(99,230,160,.15);
+  font-size:23px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.card p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.tag{
+  display:inline-block;
+  margin-top:15px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line);
+  color:#c9d8d0;
+  font-size:8px;
+}
+
+/* FIELDS */
+
+.field-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.field-card{
+  padding:20px;
+  border-radius:21px;
+}
+
+.field-card strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.field-card span{
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* KNOWLEDGE */
+
+.knowledge{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:18px;
+}
+
+.feature{
+  min-height:330px;
+  padding:30px;
+  border-radius:28px;
+  overflow:hidden;
+  position:relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.10),
+      rgba(0,0,0,.78)
+    ),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+}
+
+.feature-content{
+  position:absolute;
+  right:25px;
+  left:25px;
+  bottom:25px;
+}
+
+.feature h3{
+  margin:8px 0;
+  font-size:27px;
+}
+
+.feature p{
+  color:#d1ddd6;
+  font-size:11px;
+}
+
+.source-list{
+  display:grid;
+  gap:10px;
+}
+
+.source{
+  padding:17px;
+  border-radius:18px;
+}
+
+.source strong{
+  font-size:13px;
+}
+
+.source span{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* TOOLS */
+
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.tool{
+  padding:23px;
+  border-radius:22px;
+}
+
+.tool h3{
+  margin:0 0 8px;
+}
+
+.tool p{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.tool-status{
+  display:inline-block;
+  margin-top:10px;
+  padding:5px 8px;
+  border-radius:999px;
+  background:rgba(99,230,160,.08);
+  color:#a9efc2;
+  font-size:8px;
+}
+
+/* RESEARCH */
+
+.research{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:20px;
+  align-items:stretch;
+}
+
+.research-profile{
+  padding:28px;
+  border-radius:26px;
+}
+
+.avatar{
+  width:72px;
+  height:72px;
+  display:grid;
+  place-items:center;
+  border-radius:22px;
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#04130b;
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:17px;
+}
+
+.research-profile h3{
+  margin:0 0 5px;
+  font-size:22px;
+}
+
+.research-profile p{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.research-list{
+  display:grid;
+  gap:11px;
+}
+
+.research-item{
+  padding:18px;
+  border-radius:19px;
+}
+
+.research-item strong{
+  display:block;
+  font-size:13px;
+}
+
+.research-item span{
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* CALCULATORS */
+
+.calculator-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.calculator{
+  padding:24px;
+  border-radius:24px;
+}
+
+.calculator h3{
+  margin:0 0 15px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+label{
+  display:block;
+  color:#cbd9d1;
+  font-size:10px;
+  margin-bottom:5px;
+}
+
+input{
+  width:100%;
+  min-height:43px;
+  padding:9px 11px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+  color:#fff;
+  outline:none;
+}
+
+input:focus{
+  border-color:var(--green);
+}
+
+.result{
+  margin-top:14px;
+  padding:13px;
+  border-radius:15px;
+  background:rgba(99,230,160,.08);
+  border:1px solid rgba(99,230,160,.15);
+  color:#bdf5d1;
+  font-weight:900;
+  font-size:12px;
+}
+
+/* ROADMAP */
+
+.roadmap{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.step{
+  padding:21px;
+  border-radius:21px;
+}
+
+.number{
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
+}
+
+.step h3{
+  margin:6px 0;
+  font-size:15px;
+}
+
+.step p{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* SECURITY */
+
+.security{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.security-item{
+  padding:19px;
+  border-radius:19px;
+}
+
+.security-item strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.security-item span{
+  color:var(--muted);
+  font-size:9px;
+}
+
+/* CTA */
+
+.cta{
+  padding:45px;
+  border-radius:30px;
+  text-align:center;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(99,230,160,.12),
+      rgba(232,199,107,.07)
+    );
+}
+
+.cta h2{
+  margin:0 0 8px;
+  font-size:31px;
+}
+
+.cta p{
+  max-width:700px;
+  margin:0 auto 20px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px 0 90px;
+  border-top:1px solid var(--line);
+  color:#899d92;
+  font-size:9px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* MOBILE */
+
+.mobilebar{
+  display:none;
+}
+
+@media(max-width:950px){
+
+  .hero-grid,
+  .knowledge,
+  .research{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .field-grid,
+  .roadmap,
+  .security{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .tools-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+  .mobilebar{
+    display:flex;
+    position:fixed;
+    z-index:1100;
+    bottom:11px;
+    left:11px;
+    right:11px;
+    justify-content:space-around;
+    padding:7px;
+    border-radius:18px;
+    background:rgba(6,16,11,.86);
+    border:1px solid var(--line);
+    backdrop-filter:blur(18px);
+  }
+
+  .mobilebar a{
+    padding:7px 9px;
+    color:#cbd9d1;
+    font-size:9px;
+  }
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:calc(100% - 22px);
+  }
+
+  .nav{
+    min-height:68px;
+  }
+
+  .actions .btn-secondary{
+    display:none;
+  }
+
+  .hero{
+    padding:55px 0 50px;
+  }
+
+  h1{
+    font-size:43px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  section{
+    padding:58px 0;
+  }
+
+  .grid,
+  .field-grid,
+  .tools-grid,
+  .roadmap,
+  .security,
+  .calculator-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .cta{
+    padding:29px 18px;
+  }
+
+  .cta h2{
+    font-size:24px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition:none!important;
+  }
+}
+
+</style>
+</head>
+
 <body>
+
 <a class="skip" href="#main">پرش به محتوای اصلی</a>
-<header><div class="wrap"><nav aria-label="منوی اصلی">
-<a class="brand" href="#top"><span class="mark">🌱</span><span>کشت‌نگار<small>AGRICULTURE • KNOWLEDGE • AI</small></span></a>
-<ul class="navlinks"><li><a href="#farm">مزرعه من</a></li><li><a href="#knowledge">دانش</a></li><li><a href="#market">بازار</a></li><li><a href="#services">خدمات</a></li><li><a href="#roadmap">مسیر توسعه</a></li></ul>
-<div class="navcta"><a class="btn ghost" href="#contact">ورود / ثبت‌نام</a><a class="btn primary" href="#ai">دستیار کشاورزی</a></div>
-</nav></div></header>
-<main id="main">
-<section class="hero" id="top"><div class="wrap hero-grid"><div>
-<span class="eyebrow"><i class="dot"></i>نسخه آغازین اکوسیستم هوشمند کشاورزی</span>
-<h1>از <span>مزرعه</span> تا بازار،<br>با دانش و فناوری.</h1>
-<p class="lead">کشت‌نگار برای ساخت یک زیرساخت فارسی و قابل توسعه طراحی می‌شود؛ جایی برای مدیریت مزرعه، آموزش، تشخیص، خدمات، نهاده، ارتباط با تولیدکننده و بازار محصولات کشاورزی.</p>
-<div class="actions"><a class="btn primary" href="#farm">شروع با پرونده مزرعه ←</a><a class="btn ghost" href="#knowledge">مرور دانش کشاورزی</a></div>
-<div class="trust"><span>✓ فارسی و موبایل‌محور</span><span>✓ منبع‌محور</span><span>✓ قابل توسعه به AI و GIS</span><span>✓ طراحی برای رشد بلندمدت</span></div>
+
+<header>
+
+<div class="container">
+
+<nav class="nav">
+
+<a class="brand" href="#top">
+
+<span class="logo">🌱</span>
+
+<span>
+<span class="brand-title">JAMINTRA | جامینترا</span>
+<span class="brand-sub">AGRICULTURE • DATA • AI • TECHNOLOGY</span>
+</span>
+
+</a>
+
+<ul class="navlinks">
+
+<li><a href="#knowledge">دانش</a></li>
+<li><a href="#farm">Farm OS</a></li>
+<li><a href="#ai">AI</a></li>
+<li><a href="#research">پژوهش</a></li>
+<li><a href="#tools">ابزارها</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+
+</ul>
+
+<div class="actions">
+
+<a class="btn btn-secondary" href="#research">
+درباره
+</a>
+
+<a class="btn btn-primary" href="#ai">
+Agri AI
+</a>
+
 </div>
-<aside class="hero-card glass"><div class="panel-head"><span class="panel-title">نمای نمونه پرونده مزرعه</span><span class="status">پیش‌نمایش</span></div><div class="field"><div class="fieldtop"><div><h3>باغ پسته</h3><span class="mini">خراسان رضوی • قطعه ۱</span></div><span>🌳</span></div><div class="metrics"><div class="metric"><b>۵</b><small>هکتار</small></div><div class="metric"><b>آبی</b><small>وضعیت آب</small></div><div class="metric"><b>۱۴۰۵</b><small>سال زراعی</small></div></div><div class="ai"><b>لایه تصمیم‌یار:</b> اطلاعات خاک، آب، برگ، آب‌وهوا و سابقه عملیات در کنار منابع علمی قرار می‌گیرد؛ توصیه تجاری جای توصیه علمی را نمی‌گیرد.</div></div></aside>
-</div></section>
-<section class="section" id="farm"><div class="wrap"><div class="head"><span class="kicker">FARM OS</span><h2>پرونده واقعی کشاورز، هسته سیستم</h2><p>هر کاربر در آینده می‌تواند مزرعه، قطعه، محصول، آزمایش‌ها، عملیات و سابقه خود را مدیریت کند.</p></div><div class="grid3">
-<article class="card glass"><div class="icon">🧑‍🌾</div><h3>پروفایل کشاورز</h3><p>اطلاعات پایه، نقش کاربر، مزارع، درخواست‌ها و سابقه فعالیت.</p><span class="pill">Account & Roles</span></article>
-<article class="card glass"><div class="icon">🌱</div><h3>مزرعه و قطعه</h3><p>موقعیت، سطح، محصول، رقم، سن، خاک، آب، آبیاری و تاریخچه.</p><span class="pill">Farm Data</span></article>
-<article class="card glass"><div class="icon">🧪</div><h3>آزمایشگاه و داده</h3><p>ثبت نتایج آزمایش آب، خاک و برگ و اتصال آن به تصمیم‌های مدیریتی.</p><span class="pill">Lab Records</span></article>
-<article class="card glass"><div class="icon">📷</div><h3>تشخیص تصویری</h3><p>ثبت تصویر برگ یا گیاه، تحلیل اولیه و ارجاع به کارشناس در موارد لازم.</p><span class="pill">Vision AI</span></article>
-<article class="card glass"><div class="icon">☁️</div><h3>آب‌وهوا و پایش</h3><p>هشدارهای اقلیمی، تاریخچه و در مراحل بعد داده ماهواره و GIS.</p><span class="pill">Weather + GIS</span></article>
-<article class="card glass"><div class="icon">📒</div><h3>دفتر مزرعه</h3><p>ثبت عملیات، نهاده، هزینه، کارگر، آبیاری، سمپاشی و عملکرد.</p><span class="pill">Farm Log</span></article>
-</div></div></section>
-<section class="section alt" id="ai"><div class="wrap"><div class="head"><span class="kicker">AGRI AI</span><h2>هوش مصنوعی با زمینه، منبع و سابقه</h2><p>هدف، ساخت چت‌بات عمومی نیست؛ هدف، تصمیم‌یار کشاورزی متصل به پرونده مزرعه و پایگاه دانش است.</p></div><div class="grid3">
-<article class="card glass"><div class="icon">🤖</div><h3>دستیار هوشمند</h3><p>پرسش طبیعی درباره باغ، گلخانه، زعفران، پسته، زراعت، دام و سایر حوزه‌ها.</p></article>
-<article class="card glass"><div class="icon">🔎</div><h3>پاسخ مستند</h3><p>پاسخ‌های مهم باید تا حد امکان منبع، تاریخ، سطح اطمینان و محدودیت را نشان دهند.</p></article>
-<article class="card glass"><div class="icon">🧠</div><h3>RAG و دانش تخصصی</h3><p>مقالات، کتاب‌ها و منابع ترویجی به‌صورت کنترل‌شده وارد پایگاه دانش می‌شوند.</p></article>
-</div></div></section>
-<section class="section" id="knowledge"><div class="wrap"><div class="head"><span class="kicker">KNOWLEDGE</span><h2>دانش کشاورزی که به تصمیم تبدیل می‌شود</h2><p>محتوا باید قابل جست‌وجو، قابل استناد، به‌روز و قابل اتصال به محصول، اقلیم و مسئله باشد.</p></div><div class="knowledge">
-<article class="article glass"><span class="tag">پرونده علمی نمونه</span><h3>مدیریت علمی باغ پسته</h3><p>از طراحی و احداث باغ تا تغذیه، آبیاری، هرس، آفات، بیماری‌ها، عوارض فیزیولوژیک، اقتصاد تولید و برنامه ماهانه. این بخش با منابع واقعی پروژه کتاب پسته تکمیل می‌شود.</p><a class="btn ghost" href="#contact">ساخت پایگاه دانش ←</a></article>
-<div class="sources"><div class="source glass"><b>🌳 باغبانی و پسته</b><span>مدیریت باغ، تغذیه، آبیاری، آفات، بیماری‌ها و پس از برداشت</span></div><div class="source glass"><b>🌸 زعفران</b><span>کاشت، داشت، برداشت، کیفیت، بازار و زنجیره ارزش</span></div><div class="source glass"><b>🏡 گلخانه</b><span>اقلیم، آب، تغذیه، IPM، تولید و مدیریت فنی</span></div><div class="source glass"><b>🌾 زراعت و سایر تولیدات</b><span>گندم، جو، خربزه، حبوبات، علوفه و محصولات منطقه‌ای</span></div></div>
-</div></div></section>
-<section class="section alt" id="market"><div class="wrap"><div class="head"><span class="kicker">MARKET</span><h2>بازار نهاده و محصول؛ با جداسازی علم از تبلیغ</h2><p>تولیدکننده، کشاورز، فروشنده، خریدار و ارائه‌دهنده خدمات در آینده نقش‌های مشخص خواهند داشت.</p></div><div class="market"><div class="market-visual"><div><span class="kicker">FARM → MARKET</span><strong>محصول واقعی، مشخصات واقعی، ارتباط مستقیم‌تر</strong><span class="mini">نمونه نمایشی؛ هیچ محصول یا قیمت واقعی در این نسخه ثبت نشده است.</span></div></div><div class="list">
-<div class="row glass"><div class="left"><span class="thumb">🌱</span><div><h4>بذر و نشا</h4><p>تولیدکننده • فروشنده • مشخصات فنی</p></div></div><span class="price">بازار</span></div>
-<div class="row glass"><div class="left"><span class="thumb">🧪</span><div><h4>کود و اصلاح‌کننده</h4><p>آنالیز • مجوز • کاربرد • قیمت</p></div></div><span class="price">نهاده</span></div>
-<div class="row glass"><div class="left"><span class="thumb">🛡️</span><div><h4>سم و مدیریت آفات</h4><p>ماده مؤثره • برچسب • کاربرد مجاز</p></div></div><span class="price">نهاده</span></div>
-<div class="row glass"><div class="left"><span class="thumb">🥜</span><div><h4>محصول کشاورز</h4><p>پسته • زعفران • خربزه • غلات • گلخانه و...</p></div></div><span class="price">فروش</span></div>
-</div></div></div></section>
-<section class="section" id="services"><div class="wrap"><div class="head"><span class="kicker">ECOSYSTEM</span><h2>یک پلتفرم، چند مسیر خدمت</h2><p>ماژول‌ها جدا طراحی می‌شوند تا اضافه یا حذف‌کردن قابلیت‌ها در آینده ساده باشد.</p></div><div class="modules">
-<div class="module glass"><strong>👨‍🔬 کارشناسان</strong><span>مشاوره و ارجاع تخصصی</span></div><div class="module glass"><strong>🏪 فروشندگان</strong><span>فروش نهاده و تجهیزات</span></div><div class="module glass"><strong>🏭 تولیدکنندگان</strong><span>ارتباط با بازار</span></div><div class="module glass"><strong>🧪 آزمایشگاه‌ها</strong><span>ثبت نتایج</span></div><div class="module glass"><strong>🎓 آموزش</strong><span>دوره، آزمون و گواهی</span></div><div class="module glass"><strong>📚 کتابخانه</strong><span>مقالات و منابع</span></div><div class="module glass"><strong>📍 GIS</strong><span>نقشه و داده مکانی</span></div><div class="module glass"><strong>⚙️ اتوماسیون</strong><span>اعلان و گردش‌کار</span></div>
-</div></div></section>
-<section class="section alt" id="roadmap"><div class="wrap"><div class="head"><span class="kicker">ROADMAP</span><h2>ساخت مرحله‌ای، بدون قفل‌شدن</h2><p>نسخه اول سبک است؛ معماری برای رشد به AI، GIS، بازار، آموزش و سرویس‌های تخصصی آماده می‌شود.</p></div><div class="road">
-<div class="step glass"><span class="num">01 / NOW</span><h3>وب‌سایت حرفه‌ای</h3><p>هویت بصری، صفحات، دانش، خدمات و معماری محتوا.</p></div><div class="step glass"><span class="num">02</span><h3>حساب و مزرعه</h3><p>Auth، نقش‌ها، Farm، Field و ذخیره داده.</p></div><div class="step glass"><span class="num">03</span><h3>AI و دانش</h3><p>RAG، جست‌وجو، منابع و تحلیل تصویر.</p></div><div class="step glass"><span class="num">04</span><h3>بازار و خدمات</h3><p>نهاده، محصول، متخصص، آزمایشگاه و سفارش.</p></div><div class="step glass"><span class="num">05</span><h3>داده مکانی</h3><p>آب‌وهوا، GIS و سنجش‌ازدور.</p></div><div class="step glass"><span class="num">06</span><h3>آموزش حرفه‌ای</h3><p>دوره، آزمون، گواهی و پنل مدرس.</p></div><div class="step glass"><span class="num">07</span><h3>اتوماسیون</h3><p>اعلان، پیامک و گردش کار.</p></div><div class="step glass"><span class="num">08</span><h3>مقیاس ملی/بین‌المللی</h3><p>API، چندزبانه، موبایل و مدل‌های کسب‌وکار.</p></div>
-</div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="cta glass"><h2>شروع از یک نسخه کوچک؛ ساخت برای ده سال آینده.</h2><p>این نسخه پوسته محصول است. ورود، پیامک، پرداخت، داده مزرعه و AI بعد از راه‌اندازی Backend و کنترل دسترسی فعال می‌شوند.</p><div class="contact"><a class="btn primary" href="#top">بازگشت به بالا</a><a class="btn ghost" href="#roadmap">نقشه توسعه</a></div></div></div></section>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+
+<section class="hero" id="top">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div>
+
+<span class="eyebrow">
+<span class="dot"></span>
+TORBAT JAM • KHORASAN RAZAVI • IRAN
+</span>
+
+<h1>
+کشاورزی را با
+<span>داده، AI</span>
+و فناوری
+بازطراحی کنیم.
+</h1>
+
+<p class="hero-text">
+JAMINTRA یک زیرساخت در حال توسعه برای دانش کشاورزی،
+داده، ابزارهای تخصصی، هوش مصنوعی، خدمات دیجیتال و
+راهکارهای آینده‌محور کشاورزی است؛ با ریشه در تربت‌جام
+و نگاه به بازار و دانش بین‌المللی.
+</p>
+
+<div class="hero-actions">
+
+<a class="btn btn-primary" href="#knowledge">
+ورود به دانش کشاورزی ←
+</a>
+
+<a class="btn btn-secondary" href="#tools">
+ابزارهای کاربردی
+</a>
+
+</div>
+
+<div class="hero-trust">
+
+<span>✓ Mobile First</span>
+<span>✓ Source Based</span>
+<span>✓ AI Ready</span>
+<span>✓ Secure by Design</span>
+
+</div>
+
+</div>
+
+<aside class="dashboard glass">
+
+<div class="dashboard-head">
+
+<span class="dashboard-title">
+Farm Intelligence
+</span>
+
+<span class="status">
+DEMO
+</span>
+
+</div>
+
+<div class="field">
+
+<div class="field-top">
+
+<div>
+
+<h3>باغ پسته</h3>
+
+<span class="muted">
+خراسان رضوی • نمونه نمایشی
+</span>
+
+</div>
+
+<span style="font-size:28px">🌳</span>
+
+</div>
+
+<div class="metrics">
+
+<div class="metric">
+<strong>۵</strong>
+<span>هکتار</span>
+</div>
+
+<div class="metric">
+<strong>آبی</strong>
+<span>نوع کشت</span>
+</div>
+
+<div class="metric">
+<strong>۱۴۰۵</strong>
+<span>سال زراعی</span>
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<strong>AI Decision Layer</strong>
+
+<br>
+
+داده مزرعه، آب، خاک، اقلیم، تصویر،
+سوابق عملیات و منابع علمی در آینده
+می‌توانند در یک لایه تصمیم‌یار به هم متصل شوند.
+
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- KNOWLEDGE -->
+
+<section id="knowledge">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">AGRICULTURE KNOWLEDGE</span>
+
+<h2>
+دانش کشاورزی، از منبع تا تصمیم
+</h2>
+
+<p>
+پایگاه دانش تخصصی برای تولید محتوای علمی،
+کاربردی و قابل توسعه.
+</p>
+
+</div>
+
+<div class="grid">
+
+<article class="card glass">
+
+<div class="icon">🌳</div>
+
+<h3>باغبانی و درختان میوه</h3>
+
+<p>
+فیزیولوژی، تغذیه، آبیاری، هرس،
+آفات، بیماری‌ها، پس از برداشت و مدیریت باغ.
+</p>
+
+<span class="tag">HORTICULTURE</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">🥜</div>
+
+<h3>پسته</h3>
+
+<p>
+مدیریت باغ پسته، آب، تغذیه،
+تنش‌ها، عملکرد، کیفیت و پس از برداشت.
+</p>
+
+<span class="tag">PISTACHIO</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">🌸</div>
+
+<h3>زعفران</h3>
+
+<p>
+کاشت، داشت، برداشت، تغذیه،
+کیفیت محصول و زنجیره ارزش زعفران.
+</p>
+
+<span class="tag">SAFFRON</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">🏡</div>
+
+<h3>گلخانه</h3>
+
+<p>
+اقلیم، آبیاری، تغذیه، IPM،
+تولید و مدیریت فنی گلخانه.
+</p>
+
+<span class="tag">GREENHOUSE</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">🌾</div>
+
+<h3>زراعت</h3>
+
+<p>
+محصولات زراعی، مدیریت مزرعه،
+آب، تغذیه و بهره‌وری.
+</p>
+
+<span class="tag">CROP SCIENCE</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">🔬</div>
+
+<h3>پژوهش و مقالات</h3>
+
+<p>
+پژوهش، داده، مدل‌سازی،
+یادگیری ماشین و فناوری پس از برداشت.
+</p>
+
+<span class="tag">RESEARCH</span>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FARM OS -->
+
+<section class="alt" id="farm">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">FARM OS</span>
+
+<h2>
+مزرعه به‌عنوان یک سیستم داده
+</h2>
+
+<p>
+در معماری آینده، اطلاعات مزرعه فقط یک فرم نیست؛
+بلکه هسته اصلی تصمیم‌گیری است.
+</p>
+
+</div>
+
+<div class="field-grid">
+
+<div class="field-card glass">
+<strong>👨‍🌾 Farmer</strong>
+<span>پروفایل و نقش کاربر</span>
+</div>
+
+<div class="field-card glass">
+<strong>🌱 Farm</strong>
+<span>مزرعه و مشخصات پایه</span>
+</div>
+
+<div class="field-card glass">
+<strong>📍 Field</strong>
+<span>قطعه و اطلاعات مکانی</span>
+</div>
+
+<div class="field-card glass">
+<strong>🧪 Lab</strong>
+<span>خاک، آب و برگ</span>
+</div>
+
+<div class="field-card glass">
+<strong>☁️ Weather</strong>
+<span>آب‌وهوا و اقلیم</span>
+</div>
+
+<div class="field-card glass">
+<strong>📒 Farm Log</strong>
+<span>عملیات و نهاده‌ها</span>
+</div>
+
+<div class="field-card glass">
+<strong>📷 Vision</strong>
+<span>تصویر و تحلیل گیاه</span>
+</div>
+
+<div class="field-card glass">
+<strong>📊 Analytics</strong>
+<span>تحلیل و داشبورد</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AI -->
+
+<section id="ai">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">AGRI AI</span>
+
+<h2>
+هوش مصنوعی با زمینه و منبع
+</h2>
+
+<p>
+هدف JAMINTRA ساخت یک چت‌بات عمومی نیست؛
+هدف، ساخت Decision Support برای مسائل واقعی کشاورزی است.
+</p>
+
+</div>
+
+<div class="grid">
+
+<article class="card glass">
+
+<div class="icon">🤖</div>
+
+<h3>Agri Assistant</h3>
+
+<p>
+پرسش طبیعی درباره باغ، پسته، زعفران،
+گلخانه، زراعت و مدیریت مزرعه.
+</p>
+
+<span class="tag">LLM</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">🔎</div>
+
+<h3>RAG</h3>
+
+<p>
+اتصال مدل به کتاب‌ها، مقالات،
+منابع علمی و اسناد کنترل‌شده.
+</p>
+
+<span class="tag">RETRIEVAL</span>
+
+</article>
+
+<article class="card glass">
+
+<div class="icon">📷</div>
+
+<h3>Vision AI</h3>
+
+<p>
+تحلیل تصاویر گیاه و کمک به
+تشخیص اولیه، با ارجاع به کارشناس در موارد لازم.
+</p>
+
+<span class="tag">COMPUTER VISION</span>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- KNOWLEDGE FEATURE -->
+
+<section class="alt">
+
+<div class="container">
+
+<div class="knowledge">
+
+<div class="feature">
+
+<div class="feature-content">
+
+<span class="kicker">
+REGIONAL AGRICULTURE
+</span>
+
+<h3>
+کشاورزی خراسان؛
+داده‌محور و قابل توسعه
+</h3>
+
+<p>
+از باغ‌های پسته و مزارع زعفران تربت‌جام
+تا گلخانه و سامانه‌های هوشمند.
+</p>
+
+</div>
+
+</div>
+
+<div class="source-list">
+
+<div class="source glass">
+<strong>🥜 پسته</strong>
+<span>باغ، آب، تغذیه، تنش، عملکرد و پس از برداشت</span>
+</div>
+
+<div class="source glass">
+<strong>🌸 زعفران</strong>
+<span>تولید، کیفیت، مدیریت و زنجیره ارزش</span>
+</div>
+
+<div class="source glass">
+<strong>🏡 گلخانه</strong>
+<span>اقلیم، آب، تغذیه، IPM و مدیریت فنی</span>
+</div>
+
+<div class="source glass">
+<strong>🌾 زراعت</strong>
+<span>محصولات منطقه‌ای و مدیریت مزرعه</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">RESEARCH & FOUNDER</span>
+
+<h2>
+پژوهش، باغبانی و AgTech
+</h2>
+
+<p>
+هویت علمی پروژه بر پایه دانش باغبانی،
+پژوهش پس از برداشت و توسعه فناوری کشاورزی شکل می‌گیرد.
+</p>
+
+</div>
+
+<div class="research">
+
+<div class="research-profile glass">
+
+<div class="avatar">
+AZ
+</div>
+
+<h3>
+Aref Zibaei Rad
+</h3>
+
+<p>
+M.Sc. Horticultural Sciences
+<br>
+Fruit Trees • Postharvest • AgTech • AI
+</p>
+
+<p>
+تمرکز پژوهشی و حرفه‌ای:
+باغبانی، درختان میوه، پسته،
+فناوری پس از برداشت، پوشش‌های خوراکی،
+مدل‌سازی و کاربرد AI در کشاورزی.
+</p>
+
+</div>
+
+<div class="research-list">
+
+<div class="research-item glass">
+
+<strong>
+🔬 Edible Coatings
+</strong>
+
+<span>
+پوشش خوراکی و نگهداری پس از برداشت محصولات باغبانی.
+</span>
+
+</div>
+
+<div class="research-item glass">
+
+<strong>
+🧫 Lacticaseibacillus casei
+</strong>
+
+<span>
+کاربرد باکتری پروبیوتیک در پژوهش‌های مرتبط با محصول تازه.
+</span>
+
+</div>
+
+<div class="research-item glass">
+
+<strong>
+🌱 Balango Seed Mucilage
+</strong>
+
+<span>
+کاربرد موسیلاژ دانه بالنگو در سامانه‌های پوشش خوراکی.
+</span>
+
+</div>
+
+<div class="research-item glass">
+
+<strong>
+🧠 GPR / Machine Learning
+</strong>
+
+<span>
+مدل‌سازی و استفاده از Gaussian Process Regression
+در تحلیل داده‌های پژوهشی.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section class="alt" id="tools">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">AGRICULTURAL TOOLS</span>
+
+<h2>
+ابزارهایی که واقعاً محاسبه می‌کنند
+</h2>
+
+<p>
+نسخه اول چند ابزار ساده و قابل تست دارد؛
+ابزارهای تخصصی‌تر بعداً توسعه پیدا می‌کنند.
+</p>
+
+</div>
+
+<div class="calculator-grid">
+
+<div class="calculator glass">
+
+<h3>💧 محاسبه تقریبی آب روزانه</h3>
+
+<div class="form-row">
+
+<div>
+
+<label for="area">
+مساحت مزرعه (m²)
+</label>
+
+<input id="area" type="number" min="0" placeholder="مثلاً 3000">
+
+</div>
+
+<div>
+
+<label for="etc">
+ETc روزانه (mm)
+</label>
+
+<input id="etc" type="number" min="0" step="0.1" placeholder="مثلاً 5">
+
+</div>
+
+</div>
+
+<div class="form-row" style="margin-top:10px">
+
+<div>
+
+<label for="eff">
+راندمان آبیاری (%)
+</label>
+
+<input id="eff" type="number" min="1" max="100" value="85">
+
+</div>
+
+<div style="display:flex;align-items:end">
+
+<button class="btn btn-primary" style="width:100%" onclick="calcWater()">
+محاسبه
+</button>
+
+</div>
+
+</div>
+
+<div id="waterResult" class="result">
+نتیجه اینجا نمایش داده می‌شود.
+</div>
+
+</div>
+
+<div class="calculator glass">
+
+<h3>🧪 محاسبه مقدار کود</h3>
+
+<div class="form-row">
+
+<div>
+
+<label for="need">
+نیاز عنصر (kg)
+</label>
+
+<input id="need" type="number" min="0" step="0.1" placeholder="مثلاً 20">
+
+</div>
+
+<div>
+
+<label for="percent">
+درصد عنصر در کود
+</label>
+
+<input id="percent" type="number" min="0.1" max="100" step="0.1" placeholder="مثلاً 46">
+
+</div>
+
+</div>
+
+<button class="btn btn-primary" style="width:100%;margin-top:10px" onclick="calcFertilizer()">
+محاسبه
+</button>
+
+<div id="fertResult" class="result">
+نتیجه اینجا نمایش داده می‌شود.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">SERVICES</span>
+
+<h2>
+خدمات آینده JAMINTRA
+</h2>
+
+<p>
+ماژولار طراحی می‌کنیم تا محصول بتواند
+به‌تدریج از سایت شخصی به پلتفرم تبدیل شود.
+</p>
+
+</div>
+
+<div class="grid">
+
+<article class="card glass">
+<div class="icon">👨‍🔬</div>
+<h3>مشاوره کشاورزی</h3>
+<p>خدمات تخصصی باغ، مزرعه و گلخانه.</p>
+</article>
+
+<article class="card glass">
+<div class="icon">📊</div>
+<h3>تحلیل داده</h3>
+<p>تحلیل داده‌های کشاورزی و مدل‌سازی.</p>
+</article>
+
+<article class="card glass">
+<div class="icon">📍</div>
+<h3>GIS</h3>
+<p>داده مکانی، نقشه و سنجش‌ازدور.</p>
+</article>
+
+<article class="card glass">
+<div class="icon">🛒</div>
+<h3>Marketplace</h3>
+<p>ارتباط تولیدکننده، فروشنده و خریدار.</p>
+</article>
+
+<article class="card glass">
+<div class="icon">🎓</div>
+<h3>آموزش</h3>
+<p>دوره، آزمون، مقاله و پایگاه دانش.</p>
+</article>
+
+<article class="card glass">
+<div class="icon">⚙️</div>
+<h3>Automation</h3>
+<p>گردش کار، اعلان و سرویس‌های خودکار.</p>
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ROADMAP -->
+
+<section class="alt" id="roadmap">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">10 YEAR ROADMAP</span>
+
+<h2>
+از وب‌سایت تا اکوسیستم AgTech
+</h2>
+
+<p>
+توسعه مرحله‌ای؛ هر نسخه یک ارتقای واقعی،
+بدون حذف تاریخچه نسخه‌های قبلی.
+</p>
+
+</div>
+
+<div class="roadmap">
+
+<div class="step glass">
+<span class="number">01 • NOW</span>
+<h3>Web Foundation</h3>
+<p>هویت، محتوا، SEO، ابزارها و تجربه کاربری.</p>
+</div>
+
+<div class="step glass">
+<span class="number">02</span>
+<h3>Next.js + TypeScript</h3>
+<p>تبدیل سایت استاتیک به معماری نرم‌افزاری مدرن.</p>
+</div>
+
+<div class="step glass">
+<span class="number">03</span>
+<h3>Supabase + PostgreSQL</h3>
+<p>حساب کاربری، داده مزرعه و Backend.</p>
+</div>
+
+<div class="step glass">
+<span class="number">04</span>
+<h3>Farm OS</h3>
+<p>مدیریت مزرعه، قطعه، عملیات و سوابق.</p>
+</div>
+
+<div class="step glass">
+<span class="number">05</span>
+<h3>AI + RAG</h3>
+<p>پایگاه دانش و دستیار تخصصی کشاورزی.</p>
+</div>
+
+<div class="step glass">
+<span class="number">06</span>
+<h3>Marketplace</h3>
+<p>خدمات، نهاده، محصول و متخصص.</p>
+</div>
+
+<div class="step glass">
+<span class="number">07</span>
+<h3>GIS + IoT</h3>
+<p>داده مکانی، ماهواره، سنسور و پایش.</p>
+</div>
+
+<div class="step glass">
+<span class="number">08</span>
+<h3>Global AgTech</h3>
+<p>API، چندزبانه و توسعه بین‌المللی.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SECURITY -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="kicker">SECURITY BY DESIGN</span>
+
+<h2>
+امنیت از روز اول
+</h2>
+
+<p>
+هیچ Secret یا کلید خصوصی نباید داخل Frontend قرار بگیرد.
+Backend و داده‌های واقعی در مراحل بعدی با کنترل دسترسی ساخته می‌شوند.
+</p>
+
+</div>
+
+<div class="security">
+
+<div class="security-item glass">
+<strong>🔐 Secrets</strong>
+<span>عدم قرار دادن API Key خصوصی در Frontend</span>
+</div>
+
+<div class="security-item glass">
+<strong>🛡️ RLS</strong>
+<span>Row Level Security برای داده‌های کاربران</span>
+</div>
+
+<div class="security-item glass">
+<strong>👤 RBAC</strong>
+<span>تفکیک نقش کشاورز، کارشناس، فروشنده و مدیر</span>
+</div>
+
+<div class="security-item glass">
+<strong>📋 Audit</strong>
+<span>ثبت رویدادهای حساس در Backend</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section>
+
+<div class="container">
+
+<div class="cta glass">
+
+<h2>
+JAMINTRA از تربت‌جام شروع می‌شود؛
+اما برای مقیاس بزرگ طراحی می‌شود.
+</h2>
+
+<p>
+هدف، ساخت یک محصول قابل توسعه در تقاطع
+Agriculture + Data + AI + Technology است.
+</p>
+
+<a class="btn btn-primary" href="#top">
+بازگشت به ابتدای سایت ↑
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
-<div class="mobilebar"><a href="#farm">🌱 مزرعه</a><a href="#knowledge">📚 دانش</a><a href="#market">🛒 بازار</a><a href="#ai">🤖 AI</a><a href="#contact">☰ بیشتر</a></div>
-<footer><div class="wrap foot"><span>کشت‌نگار — نام کاری پروژه</span><span>نسخه نمایشی 0.2 • بدون جمع‌آوری اطلاعات کاربر</span></div></footer>
-</body></html>
+
+<div class="mobilebar">
+
+<a href="#knowledge">📚 دانش</a>
+<a href="#farm">🌱 Farm</a>
+<a href="#ai">🤖 AI</a>
+<a href="#tools">🧮 ابزار</a>
+<a href="#roadmap">🗺️ مسیر</a>
+
+</div>
+
+<footer>
+
+<div class="container footer">
+
+<span>
+JAMINTRA | جامینترا
+</span>
+
+<span>
+Agriculture • Data • AI • Technology
+</span>
+
+<span>
+© 2026
+</span>
+
+</div>
+
+</footer>
+
+<script>
+
+function calcWater(){
+
+  const area =
+    Number(document.getElementById("area").value);
+
+  const etc =
+    Number(document.getElementById("etc").value);
+
+  const eff =
+    Number(document.getElementById("eff").value);
+
+  const result =
+    document.getElementById("waterResult");
+
+  if(area <= 0 || etc <= 0 || eff <= 0){
+
+    result.textContent =
+      "لطفاً همه مقادیر را درست وارد کنید.";
+
+    return;
+  }
+
+  const water =
+    area * etc / (eff / 100);
+
+  result.textContent =
+    "حجم تقریبی آب موردنیاز: " +
+    water.toFixed(1) +
+    " لیتر در روز";
+
+}
+
+function calcFertilizer(){
+
+  const need =
+    Number(document.getElementById("need").value);
+
+  const percent =
+    Number(document.getElementById("percent").value);
+
+  const result =
+    document.getElementById("fertResult");
+
+  if(need <= 0 || percent <= 0){
+
+    result.textContent =
+      "لطفاً مقادیر معتبر وارد کنید.";
+
+    return;
+  }
+
+  const fertilizer =
+    need / (percent / 100);
+
+  result.textContent =
+    "مقدار تئوری کود: " +
+    fertilizer.toFixed(2) +
+    " کیلوگرم";
+
+}
+
+</script>
+
+</body>
+</html>
