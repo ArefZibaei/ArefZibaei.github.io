@@ -2,1604 +2,1812 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0b1510">
-  <meta name="description" content="JAMINTRA | جامینترا — خدمات کشاورزی، دانش، داده، هوش مصنوعی و فناوری برای باغ، مزرعه و گلخانه.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7ef">
+  <meta name="description" content="جام‌کشت؛ دانش، ابزار و خدمات تخصصی کشاورزی با تمرکز بر باغبانی، پسته، زعفران، خاک و آب و فناوری‌های نوین کشاورزی.">
+  <meta name="author" content="عارف زیبایی‌راد">
   <meta name="robots" content="index,follow">
-  <meta name="author" content="Aref Zibaei">
   <link rel="canonical" href="https://arefzibaei.github.io/">
-  <title>JAMINTRA | جامینترا — Agriculture • Data • AI • Technology</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="جام‌کِشت | دانش و فناوری کشاورزی">
+  <meta property="og:description" content="دانش کاربردی، ابزارهای محاسباتی و خدمات تخصصی کشاورزی.">
+  <meta property="og:url" content="https://arefzibaei.github.io/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85">
+  <title>جام‌کِشت | دانش، ابزار و خدمات کشاورزی</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "جام‌کِشت",
+    "alternateName": "JamKesht",
+    "url": "https://arefzibaei.github.io/",
+    "description": "پروژه توسعه دانش و خدمات دیجیتال کشاورزی با تمرکز بر باغبانی و درختان میوه.",
+    "founder": {
+      "@type": "Person",
+      "name": "عارف زیبایی‌راد"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Iran"
+    }
+  }
+  </script>
 
   <style>
-    :root{
-      --bg:#07110b;
-      --bg2:#0b1710;
-      --card:rgba(18,34,24,.78);
-      --card2:#102018;
-      --line:rgba(255,255,255,.10);
-      --text:#f4f7f4;
-      --muted:#aebbb1;
-      --accent:#7ee787;
-      --accent2:#b8f397;
-      --gold:#e7c875;
-      --danger:#ff8b8b;
-      --shadow:0 18px 55px rgba(0,0,0,.30);
-      --radius:22px;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:
-        radial-gradient(circle at 85% 10%,rgba(76,175,80,.14),transparent 28%),
-        radial-gradient(circle at 10% 30%,rgba(139,195,74,.08),transparent 25%),
-        var(--bg);
-      color:var(--text);
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
-      line-height:1.8;
-    }
-
-    a{color:inherit;text-decoration:none}
-    button,input,textarea,select{font:inherit}
-    button{cursor:pointer}
-    img{max-width:100%;display:block}
-
-    .container{width:min(calc(100% - 28px),var(--max));margin:auto}
-    .skip{
-      position:fixed;
-      top:8px;
-      right:8px;
-      transform:translateY(-150%);
-      background:#fff;
-      color:#000;
-      padding:10px 14px;
-      border-radius:10px;
-      z-index:9999
-    }
-    .skip:focus{transform:none}
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(18px);
-      background:rgba(7,17,11,.82);
-      border-bottom:1px solid var(--line);
-    }
-
-    .nav{
-      min-height:68px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:900;
-      letter-spacing:.5px;
-      white-space:nowrap;
-    }
-
-    .brand-mark{
-      width:40px;
-      height:40px;
-      border-radius:13px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg,var(--accent),#2e7d32);
-      color:#061008;
-      font-weight:1000;
-    }
-
-    .brand small{
-      display:block;
-      color:var(--muted);
-      font-size:9px;
-      letter-spacing:1.6px;
-      direction:ltr;
-      text-align:right;
-    }
-
-    .nav-links{
-      display:none;
-      gap:4px;
-      align-items:center;
-    }
-
-    .nav-links a{
-      padding:8px 11px;
-      border-radius:10px;
-      color:var(--muted);
-      font-size:14px;
+    :root {
+      color-scheme: light;
+      --bg: #f7f7ef;
+      --paper: #ffffff;
+      --paper-soft: #f0f2e7;
+      --green: #244c38;
+      --green-dark: #173526;
+      --green-light: #e5eee2;
+      --olive: #73834c;
+      --gold: #c79543;
+      --text: #26352b;
+      --muted: #68756a;
+      --line: #e4e8dd;
+      --danger: #a64035;
+      --radius: 20px;
+      --shadow: 0 12px 35px rgba(36, 76, 56, .08);
+      --max: 1160px;
     }
 
-    .nav-links a:hover{
-      background:rgba(255,255,255,.06);
-      color:var(--text);
+    * {
+      box-sizing: border-box;
     }
 
-    .menu-btn{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      color:var(--text);
-      border-radius:12px;
-      padding:8px 11px;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
     }
 
-    .hero{
-      padding:72px 0 42px;
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Tahoma, "Segoe UI", sans-serif;
+      line-height: 1.9;
     }
 
-    .hero-grid{
-      display:grid;
-      gap:26px;
-      align-items:center;
+    body, button, input, textarea, select {
+      font-family: Tahoma, "Segoe UI", sans-serif;
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      border:1px solid rgba(126,231,135,.25);
-      background:rgba(126,231,135,.07);
-      color:var(--accent2);
-      border-radius:999px;
-      padding:5px 11px;
-      font-size:12px;
-      margin-bottom:14px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    h1{
-      font-size:clamp(34px,7vw,68px);
-      line-height:1.08;
-      margin:0 0 18px;
-      letter-spacing:-1.5px;
+    button, input, textarea, select {
+      font-size: inherit;
     }
 
-    .gradient{
-      background:linear-gradient(110deg,#fff,var(--accent2));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
+    button {
+      cursor: pointer;
     }
 
-    .hero p{
-      color:var(--muted);
-      font-size:clamp(16px,2vw,20px);
-      max-width:720px;
-      margin:0 0 24px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+    .container {
+      width: min(calc(100% - 36px), var(--max));
+      margin-inline: auto;
     }
 
-    .btn{
-      border:1px solid var(--line);
-      border-radius:13px;
-      padding:11px 16px;
-      background:rgba(255,255,255,.055);
-      color:var(--text);
-      transition:.2s;
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      right: 8px;
+      z-index: 3000;
+      padding: 10px 14px;
+      background: white;
+      color: #111;
+      border-radius: 10px;
+      transform: translateY(-150%);
     }
 
-    .btn:hover{
-      transform:translateY(-1px);
-      background:rgba(255,255,255,.09);
+    .skip-link:focus {
+      transform: translateY(0);
     }
 
-    .btn.primary{
-      background:var(--accent);
-      border-color:var(--accent);
-      color:#061008;
-      font-weight:800;
+    .topbar {
+      background: var(--green-dark);
+      color: #edf3e9;
+      font-size: 11px;
+      padding: 7px 0;
     }
 
-    .btn.gold{
-      background:rgba(231,200,117,.10);
-      border-color:rgba(231,200,117,.25);
-      color:#f4dd96;
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .hero-card{
-      border:1px solid var(--line);
-      background:linear-gradient(145deg,rgba(126,231,135,.10),rgba(255,255,255,.025));
-      border-radius:28px;
-      padding:22px;
-      box-shadow:var(--shadow);
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 247, 239, .94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
     }
 
-    .hero-card .signal{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom:18px;
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
     }
 
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:var(--accent);
-      box-shadow:0 0 18px var(--accent);
-      display:inline-block;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
     }
 
-    .mini-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:10px;
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--green);
+      color: white;
+      font-size: 25px;
+      font-weight: 900;
     }
 
-    .mini{
-      padding:14px;
-      border:1px solid var(--line);
-      background:rgba(0,0,0,.13);
-      border-radius:16px;
+    .brand-name {
+      color: var(--green-dark);
+      font-weight: 900;
+      font-size: 19px;
+      line-height: 1.3;
     }
 
-    .mini strong{
-      display:block;
-      font-size:20px;
+    .brand-sub {
+      display: block;
+      direction: ltr;
+      text-align: right;
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+      font-weight: 500;
     }
 
-    .mini span{
-      color:var(--muted);
-      font-size:12px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
-    section{
-      padding:62px 0;
-      scroll-margin-top:76px;
+    .nav-links a {
+      color: var(--muted);
+      font-size: 12px;
+      padding: 9px 10px;
+      border-radius: 10px;
+      transition: .2s;
     }
 
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      align-items:end;
-      margin-bottom:22px;
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: var(--green-light);
+      color: var(--green-dark);
     }
 
-    .section-head h2{
-      margin:0;
-      font-size:clamp(25px,4vw,38px);
-      line-height:1.2;
+    .menu-btn {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      color: var(--green);
+      padding: 8px 12px;
     }
 
-    .section-head p{
-      color:var(--muted);
-      margin:8px 0 0;
-      max-width:720px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 43px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 9px 16px;
+      background: white;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 700;
+      transition: .2s;
     }
 
-    .grid{
-      display:grid;
-      gap:14px;
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
 
-    .grid-2{grid-template-columns:1fr}
-    .grid-3{grid-template-columns:1fr}
-    .grid-4{grid-template-columns:1fr}
+    .btn-primary {
+      background: var(--green);
+      border-color: var(--green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-dark);
+    }
+
+    .btn-outline {
+      border-color: #b8c9b5;
+      color: var(--green);
+      background: transparent;
+    }
+
+    .hero {
+      padding: 56px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-light);
+      color: var(--green);
+      padding: 6px 13px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--olive);
+    }
+
+    h1 {
+      color: var(--green-dark);
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.45;
+      margin: 18px 0 14px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero-highlight {
+      color: var(--olive);
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 580px;
+      margin: 0 0 23px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      min-height: 400px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 17px;
+      right: 17px;
+      left: 17px;
+      padding: 13px 16px;
+      background: rgba(23, 53, 38, .88);
+      color: white;
+      border-radius: 15px;
+      font-size: 11px;
+      backdrop-filter: blur(8px);
+    }
+
+    .image-caption strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .trust-strip {
+      padding: 15px 0;
+      border-block: 1px solid var(--line);
+      background: rgba(255,255,255,.55);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .trust-item {
+      text-align: center;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 400;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 27px;
+    }
+
+    .section-kicker {
+      color: var(--olive);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .section-heading h2 {
+      color: var(--green-dark);
+      font-size: clamp(25px, 3.5vw, 36px);
+      line-height: 1.5;
+      margin: 5px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 5px 0 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 17px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 21px;
+      box-shadow: 0 6px 22px rgba(36,76,56,.035);
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--green-dark);
+      font-size: 16px;
+      margin: 0 0 7px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 12px;
+    }
+
+    .topic-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .topic-image {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      background: var(--paper-soft);
+    }
+
+    .topic-content {
+      padding: 18px;
+    }
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:20px;
-      box-shadow:0 8px 30px rgba(0,0,0,.12);
+    .topic-label {
+      display: inline-block;
+      color: var(--olive);
+      background: var(--green-light);
+      padding: 3px 9px;
+      border-radius: 50px;
+      font-size: 10px;
+      margin-bottom: 8px;
     }
 
-    .card h3{
-      margin:0 0 7px;
-      font-size:19px;
+    .topic-content a {
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
     }
 
-    .card p{
-      color:var(--muted);
-      margin:0 0 12px;
-      font-size:14px;
+    .search-box {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--text);
+      border-radius: 13px;
+      margin-bottom: 17px;
+      outline: none;
     }
 
-    .tag{
-      display:inline-block;
-      font-size:11px;
-      padding:4px 8px;
-      border-radius:999px;
-      background:rgba(126,231,135,.09);
-      border:1px solid rgba(126,231,135,.16);
-      color:var(--accent2);
-      margin:3px;
+    .search-box:focus,
+    .field:focus {
+      border-color: var(--olive);
+      box-shadow: 0 0 0 3px rgba(115,131,76,.12);
     }
 
-    .icon{
-      width:46px;
-      height:46px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      background:rgba(126,231,135,.08);
-      border:1px solid rgba(126,231,135,.13);
-      font-size:22px;
-      margin-bottom:12px;
+    .hidden {
+      display: none !important;
     }
 
-    .search-box{
-      display:flex;
-      gap:8px;
-      margin-bottom:18px;
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .input,
-    textarea,
-    select{
-      width:100%;
-      background:#09150e;
-      border:1px solid var(--line);
-      color:var(--text);
-      border-radius:13px;
-      padding:11px 13px;
-      outline:none;
+    .tool-icon {
+      width: 47px;
+      height: 47px;
+      display: grid;
+      place-items: center;
+      background: var(--green-light);
+      color: var(--green);
+      border-radius: 15px;
+      font-size: 22px;
     }
 
-    .input:focus,
-    textarea:focus,
-    select:focus{
-      border-color:rgba(126,231,135,.55);
-      box-shadow:0 0 0 3px rgba(126,231,135,.07);
+    .field-group label {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 5px;
     }
 
-    textarea{
-      min-height:110px;
-      resize:vertical;
+    .field {
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fcfcf8;
+      color: var(--text);
+      padding: 10px 12px;
+      outline: none;
     }
 
-    .article{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
+    textarea.field {
+      min-height: 115px;
+      resize: vertical;
     }
 
-    .article .meta{
-      color:#91a097;
-      font-size:11px;
+    .field-hint {
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 4px;
     }
 
-    .article .more{
-      color:var(--accent2);
-      font-size:13px;
-      font-weight:700;
+    .result {
+      min-height: 52px;
+      background: var(--green-light);
+      border: 1px solid #d6e4d2;
+      border-radius: 12px;
+      color: var(--green-dark);
+      padding: 10px 12px;
+      font-size: 12px;
+      font-weight: 800;
     }
 
-    .tool{
-      display:grid;
-      gap:12px;
+    .notice {
+      background: #f6f0df;
+      border: 1px solid #eadcb8;
+      color: #6f592d;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 11px;
+      margin-top: 18px;
     }
 
-    .result{
-      min-height:50px;
-      display:flex;
-      align-items:center;
-      padding:12px 14px;
-      border:1px dashed rgba(126,231,135,.30);
-      border-radius:14px;
-      background:rgba(126,231,135,.05);
-      color:var(--accent2);
-      font-weight:700;
+    .notice-danger {
+      background: #f9eeeb;
+      border-color: #efd2cb;
+      color: var(--danger);
     }
 
-    .profile{
-      display:grid;
-      gap:15px;
+    .service-list {
+      display: grid;
+      gap: 13px;
     }
 
-    .profile-top{
-      display:flex;
-      align-items:center;
-      gap:14px;
+    .service-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding-bottom: 13px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .avatar{
-      width:62px;
-      height:62px;
-      border-radius:20px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg,#7ee787,#3b7f43);
-      color:#061008;
-      font-weight:900;
-      font-size:23px;
+    .service-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
     }
 
-    .status{
-      color:var(--muted);
-      font-size:12px;
+    .service-number {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--green-light);
+      color: var(--green);
+      font-weight: 900;
+      font-size: 12px;
     }
 
-    .farm-item{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      border-bottom:1px solid var(--line);
-      padding:11px 0;
+    .service-item strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 13px;
     }
 
-    .farm-item:last-child{border-bottom:0}
+    .service-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .feature-banner {
+      background: var(--green-dark);
+      color: white;
+      border-radius: 26px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .feature-banner h2 {
+      font-size: 26px;
+      margin: 0 0 9px;
+    }
+
+    .feature-banner p {
+      color: #d0ded0;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .feature-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .feature-point {
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      border-radius: 13px;
+      font-size: 11px;
+    }
+
+    .feature-point strong {
+      display: block;
+      color: #d9e8bc;
+      font-size: 15px;
+    }
+
+    .source-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .source-type {
+      color: var(--olive);
+      font-size: 10px;
+      font-weight: 900;
+      margin-bottom: 7px;
+    }
+
+    .source-card .btn {
+      margin-top: auto;
+    }
+
+    .founder-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
-    .chat{
-      display:flex;
-      flex-direction:column;
-      gap:9px;
-      min-height:360px;
-      max-height:480px;
-      overflow:auto;
-      padding:4px;
+    .founder-avatar {
+      width: 70px;
+      height: 70px;
+      flex: 0 0 70px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: var(--green);
+      color: white;
+      font-size: 28px;
+      font-weight: 900;
     }
 
-    .bubble{
-      max-width:88%;
-      padding:11px 13px;
-      border-radius:15px;
-      font-size:14px;
+    .founder-card h3 {
+      margin: 0;
     }
 
-    .bubble.ai{
-      align-self:flex-start;
-      background:#122117;
-      border:1px solid var(--line);
+    .founder-card p {
+      margin: 3px 0;
     }
 
-    .bubble.user{
-      align-self:flex-end;
-      background:rgba(126,231,135,.11);
-      border:1px solid rgba(126,231,135,.16);
+    .roadmap-step {
+      border-top: 3px solid var(--olive);
     }
 
-    .chat-input{
-      display:flex;
-      gap:8px;
-      margin-top:10px;
+    .roadmap-step small {
+      display: block;
+      color: var(--olive);
+      font-weight: 900;
+      font-size: 10px;
+      margin-bottom: 7px;
     }
 
-    .notice{
-      padding:13px 15px;
-      border-radius:15px;
-      border:1px solid rgba(231,200,117,.25);
-      background:rgba(231,200,117,.07);
-      color:#ead99f;
-      font-size:13px;
-      margin-top:12px;
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
     }
 
-    .timeline{
-      display:grid;
-      gap:12px;
+    .full {
+      grid-column: 1 / -1;
     }
 
-    .step{
-      display:grid;
-      grid-template-columns:44px 1fr;
-      gap:12px;
-      align-items:start;
+    .form-status {
+      min-height: 24px;
+      color: var(--green);
+      font-size: 11px;
+      margin-top: 10px;
     }
 
-    .step-num{
-      width:44px;
-      height:44px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      background:rgba(126,231,135,.08);
-      border:1px solid rgba(126,231,135,.15);
-      color:var(--accent2);
-      font-weight:900;
+    .footer {
+      background: var(--green-dark);
+      color: #e6eee4;
+      padding: 35px 0;
     }
 
-    footer{
-      border-top:1px solid var(--line);
-      padding:35px 0 55px;
-      color:var(--muted);
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 25px;
     }
 
-    .footer-grid{
-      display:grid;
-      gap:22px;
+    .footer h3 {
+      font-size: 15px;
+      margin: 0 0 10px;
     }
 
-    .small{
-      color:#8f9b93;
-      font-size:12px;
+    .footer p,
+    .footer a {
+      color: #c2d0c3;
+      font-size: 11px;
     }
 
-    .empty{
-      color:var(--muted);
-      padding:25px;
-      text-align:center;
-      border:1px dashed var(--line);
-      border-radius:18px;
+    .footer a:hover {
+      color: white;
     }
 
-    .hidden{display:none!important}
+    .footer-links {
+      display: grid;
+      gap: 5px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.13);
+      margin-top: 25px;
+      padding-top: 17px;
+      color: #aebdaf;
+      font-size: 10px;
+      text-align: center;
+    }
 
-    @media (min-width:700px){
-      .container{width:min(calc(100% - 42px),var(--max))}
-      .nav-links{display:flex}
-      .menu-btn{display:none}
-      .hero{padding:100px 0 55px}
-      .hero-grid{grid-template-columns:1.25fr .75fr}
-      .grid-2{grid-template-columns:repeat(2,1fr)}
-      .grid-3{grid-template-columns:repeat(3,1fr)}
-      .grid-4{grid-template-columns:repeat(4,1fr)}
-      .profile{grid-template-columns:.8fr 1.2fr}
-      .footer-grid{grid-template-columns:1fr 1fr}
+    :focus-visible {
+      outline: 2px solid var(--olive);
+      outline-offset: 3px;
     }
 
-    @media (max-width:699px){
-      .nav-links.open{
-        display:flex;
-        position:absolute;
-        top:68px;
-        right:14px;
-        left:14px;
-        flex-direction:column;
-        align-items:stretch;
-        padding:10px;
-        background:#0b1710;
-        border:1px solid var(--line);
-        border-radius:16px;
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
       }
-      .nav-links a{padding:11px}
+
+      .hero-image-wrap {
+        min-height: 320px;
+      }
+
+      .hero-image {
+        height: 320px;
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 77px;
+        right: 18px;
+        left: 18px;
+        padding: 12px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
     }
 
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *{transition:none!important}
+    @media (max-width: 650px) {
+      .container {
+        width: min(calc(100% - 26px), var(--max));
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav {
+        min-height: 69px;
+      }
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 37px 0;
+      }
+
+      .hero-image,
+      .hero-image-wrap {
+        height: 265px;
+        min-height: 265px;
+      }
+
+      section {
+        padding: 47px 0;
+      }
+
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+      }
+
+      .feature-banner {
+        grid-template-columns: 1fr;
+        padding: 23px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .topic-card {
+        padding: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
 
-<a class="skip" href="#main">پرش به محتوای اصلی</a>
-
-<header>
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="JAMINTRA">
-      <span class="brand-mark">J</span>
-      <span>
-        JAMINTRA
-        <small>AGRICULTURE • DATA • AI • TECHNOLOGY</small>
-      </span>
-    </a>
-
-    <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو">☰</button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#knowledge">دانش</a>
-      <a href="#tools">ابزارها</a>
-      <a href="#ai">هوش مصنوعی</a>
-      <a href="#services">خدمات</a>
-      <a href="#profile">پروفایل</a>
-      <a href="#about">درباره</a>
-    </nav>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>جام‌کِشت؛ دانش کاربردی برای تصمیم بهتر در کشاورزی</span>
+      <span>خاستگاه پروژه: تربت‌جام، خراسان رضوی</span>
+    </div>
   </div>
-</header>
 
-<main id="main">
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="صفحه اصلی جام‌کشت">
+        <span class="brand-mark">ج</span>
+        <span>
+          <span class="brand-name">جام‌کِشت</span>
+          <span class="brand-sub">JAMKESHT · AGRICULTURE</span>
+        </span>
+      </a>
 
-  <section class="hero" id="home">
-    <div class="container hero-grid">
+      <button class="menu-btn" id="menuBtn" type="button"
+        aria-expanded="false" aria-controls="navLinks"
+        aria-label="باز کردن منو">☰</button>
 
-      <div>
-        <span class="eyebrow">● پلتفرم کشاورزی دیجیتال</span>
+      <nav class="nav-links" id="navLinks" aria-label="منوی اصلی">
+        <a href="#knowledge">مرکز دانش</a>
+        <a href="#tools">ابزارها</a>
+        <a href="#services">خدمات</a>
+        <a href="#ai">فناوری و AI</a>
+        <a href="#references">منابع</a>
+        <a href="#about">درباره ما</a>
+        <a href="#request">درخواست مشاوره</a>
+      </nav>
+    </div>
+  </header>
 
-        <h1>
-          کشاورزی را با
-          <span class="gradient">دانش، داده و هوش مصنوعی</span>
-          هوشمندتر کنیم.
-        </h1>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            دانش کشاورزی، از مزرعه تا تصمیم
+          </span>
 
-        <p>
-          JAMINTRA یک زیرساخت در حال توسعه برای دانش کشاورزی،
-          خدمات تخصصی، ابزارهای تصمیم‌یار، هوش مصنوعی و فناوری‌های
-          دیجیتال در باغ، مزرعه و گلخانه است.
-        </p>
+          <h1>
+            آینده کشاورزی<br>
+            با <span class="hero-highlight">دانش و فناوری</span>
+          </h1>
 
-        <div class="actions">
-          <a class="btn primary" href="#tools">شروع با ابزارها</a>
-          <a class="btn" href="#knowledge">مطالعه دانش کشاورزی</a>
-          <a class="btn gold" href="#services">درخواست خدمت</a>
+          <p class="hero-copy">
+            جام‌کِشت پروژه‌ای برای توسعه خدمات و دانش دیجیتال کشاورزی است؛
+            با تمرکز بر باغبانی، درختان میوه، پسته، زعفران، خاک و آب،
+            گلخانه و فناوری پس از برداشت. هدف ما پیوند دانش معتبر،
+            تجربه میدانی و ابزارهای کاربردی برای تصمیم‌گیری بهتر است.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#knowledge">ورود به مرکز دانش</a>
+            <a class="btn btn-outline" href="#tools">ابزارهای محاسباتی</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1100&q=85"
+            alt="چشم‌انداز مزرعه و زمین‌های کشاورزی"
+            fetchpriority="high">
+          <div class="image-caption">
+            <strong>کشاورزی دقیق‌تر، تصمیم آگاهانه‌تر</strong>
+            تصاویر این وب‌سایت جنبه نمایشی دارند و لزوماً متعلق به مزارع منطقه نیستند.
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-card">
-        <div class="signal">
-          <strong>JAMINTRA OS</strong>
-          <span><span class="dot"></span> Foundation Online</span>
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">دانش مستند<span>توجه به منابع علمی</span></div>
+        <div class="trust-item">ابزار کاربردی<span>محاسبات شفاف و قابل بررسی</span></div>
+        <div class="trust-item">تجربه میدانی<span>توجه به شرایط واقعی مزرعه</span></div>
+        <div class="trust-item">فناوری نوین<span>مسیر توسعه کشاورزی هوشمند</span></div>
+      </div>
+    </div>
+
+    <section id="knowledge">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">KNOWLEDGE CENTER</div>
+          <h2>مرکز دانش کشاورزی</h2>
+          <p>
+            موضوعات اصلی دانش و آموزش جام‌کِشت. این بخش در نسخه فعلی
+            معرفی محورهای محتوایی است؛ مطالب تخصصی باید پیش از انتشار
+            با منابع علمی و شرایط منطقه‌ای تطبیق داده شوند.
+          </p>
         </div>
 
-        <div class="mini-grid">
-          <div class="mini">
-            <strong>01</strong>
-            <span>Knowledge</span>
+        <input class="search-box" id="resourceSearch" type="search"
+          placeholder="جست‌وجو؛ مثلاً پسته، آبیاری، زعفران یا خاک..."
+          aria-label="جست‌وجو در موضوعات دانش">
+
+        <div class="grid grid-3" id="resourceGrid">
+          <article class="card topic-card" data-search="پسته باغبانی تغذیه آبیاری">
+            <img class="topic-image" loading="lazy"
+              src="https://images.unsplash.com/photo-1501436513145-30f24e19fcc4?auto=format&fit=crop&w=800&q=80"
+              alt="درختان و فضای سبز باغ">
+            <div class="topic-content">
+              <span class="topic-label">باغبانی</span>
+              <h3>مدیریت باغ پسته</h3>
+              <p>بررسی آب و خاک، تغذیه، مدیریت باغ، تنش‌های محیطی و کیفیت محصول.</p>
+              <a href="#references">مشاهده منابع مرتبط ←</a>
+            </div>
+          </article>
+
+          <article class="card topic-card" data-search="زعفران پیاز مزرعه برداشت">
+            <img class="topic-image" loading="lazy"
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
+              alt="گیاهان و محصولات کشاورزی">
+            <div class="topic-content">
+              <span class="topic-label">گیاهان زراعی و دارویی</span>
+              <h3>تولید و مدیریت زعفران</h3>
+              <p>کیفیت پیاز، شرایط خاک، مدیریت آب، عملیات داشت و فرآوری محصول.</p>
+              <a href="#references">مشاهده منابع مرتبط ←</a>
+            </div>
+          </article>
+
+          <article class="card topic-card" data-search="خاک آب شوری آزمایش">
+            <img class="topic-image" loading="lazy"
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+              alt="محصولات و زمین کشاورزی">
+            <div class="topic-content">
+              <span class="topic-label">منابع پایه تولید</span>
+              <h3>خاک، آب و تغذیه گیاه</h3>
+              <p>نمونه‌برداری، تفسیر آزمایش، شوری، کیفیت آب و مدیریت تغذیه.</p>
+              <a href="#tools">استفاده از ابزارها ←</a>
+            </div>
+          </article>
+
+          <article class="card topic-card" data-search="گلخانه دما رطوبت تهویه">
+            <img class="topic-image" loading="lazy"
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+              alt="گیاهان در محیط کشت">
+            <div class="topic-content">
+              <span class="topic-label">کشت کنترل‌شده</span>
+              <h3>گلخانه و محیط کشت</h3>
+              <p>پایش دما، رطوبت، تهویه، کیفیت آب و مدیریت شرایط رشد.</p>
+              <a href="#references">مشاهده منابع مرتبط ←</a>
+            </div>
+          </article>
+
+          <article class="card topic-card" data-search="آفات بیماری سلامت گیاه تشخیص">
+            <img class="topic-image" loading="lazy"
+              src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=800&q=80"
+              alt="برگ و گیاه سبز">
+            <div class="topic-content">
+              <span class="topic-label">حفاظت گیاه</span>
+              <h3>سلامت گیاه</h3>
+              <p>پایش آفات و بیماری‌ها، بررسی علائم و اصول تشخیص علمی.</p>
+              <a href="#references">مشاهده منابع مرتبط ←</a>
+            </div>
+          </article>
+
+          <article class="card topic-card" data-search="پس از برداشت نگهداری کیفیت پسته">
+            <img class="topic-image" loading="lazy"
+              src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=800&q=80"
+              alt="محصولات کشاورزی تازه">
+            <div class="topic-content">
+              <span class="topic-label">فناوری پس از برداشت</span>
+              <h3>کیفیت و نگهداری محصول</h3>
+              <p>کاهش ضایعات، نگهداری، بسته‌بندی و فناوری‌های حفظ کیفیت.</p>
+              <a href="#references">مشاهده منابع مرتبط ←</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="field-hint hidden" id="noResource">موضوعی با این عبارت پیدا نشد.</p>
+      </div>
+    </section>
+
+    <section id="tools" style="background:var(--paper-soft)">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">AGRICULTURAL CALCULATORS</div>
+          <h2>ابزارهای محاسباتی کشاورزی</h2>
+          <p>
+            محاسبات زیر برای برآورد اولیه و تبدیل واحد طراحی شده‌اند.
+            نتیجه آن‌ها به‌تنهایی نسخه اجرایی آبیاری یا کوددهی نیست.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card tool-card">
+            <div class="tool-icon">💧</div>
+            <h3>تبدیل عمق آبیاری به حجم آب</h3>
+            <p>محاسبه حجم خالص و حجم ناخالص با استفاده از راندمان واردشده.</p>
+
+            <div class="field-group">
+              <label for="waterArea">مساحت (هکتار)</label>
+              <input class="field" id="waterArea" type="number" min="0.01" step="any" placeholder="مثلاً 2">
+            </div>
+
+            <div class="field-group">
+              <label for="waterDepth">عمق آب (میلی‌متر)</label>
+              <input class="field" id="waterDepth" type="number" min="0.01" step="any" placeholder="مثلاً 50">
+            </div>
+
+            <div class="field-group">
+              <label for="waterEfficiency">راندمان کاربرد آب (درصد)</label>
+              <input class="field" id="waterEfficiency" type="number" min="1" max="100" step="any" value="80">
+            </div>
+
+            <button class="btn btn-primary" id="waterBtn" type="button">محاسبه حجم آب</button>
+            <div class="result" id="waterResult" aria-live="polite">نتیجه محاسبه اینجا نمایش داده می‌شود.</div>
+            <span class="field-hint">اعداد را با رقم انگلیسی وارد کنید.</span>
           </div>
-          <div class="mini">
-            <strong>02</strong>
-            <span>Smart Tools</span>
+
+          <div class="card tool-card">
+            <div class="tool-icon">🌱</div>
+            <h3>برآورد مقدار کود</h3>
+            <p>محاسبه مقدار نظری کود بر اساس مقدار ماده غذایی و درصد درج‌شده روی کود.</p>
+
+            <div class="field-group">
+              <label for="nutrientAmount">مقدار ماده غذایی موردنیاز (کیلوگرم)</label>
+              <input class="field" id="nutrientAmount" type="number" min="0.01" step="any" placeholder="مثلاً 10">
+            </div>
+
+            <div class="field-group">
+              <label for="fertilizerPercent">درصد همان ماده غذایی در کود</label>
+              <input class="field" id="fertilizerPercent" type="number" min="0.01" max="100" step="any" placeholder="مثلاً 20">
+            </div>
+
+            <button class="btn btn-primary" id="fertilizerBtn" type="button">محاسبه مقدار کود</button>
+            <div class="result" id="fertilizerResult" aria-live="polite">نتیجه محاسبه اینجا نمایش داده می‌شود.</div>
+            <span class="field-hint">مثال: اگر هدف ۱۰ کیلوگرم N و کود دارای ۲۰٪ N باشد، خروجی نظری ۵۰ کیلوگرم کود است.</span>
           </div>
-          <div class="mini">
-            <strong>03</strong>
-            <span>AI / RAG</span>
-          </div>
-          <div class="mini">
-            <strong>04</strong>
-            <span>Farm OS</span>
+
+          <div class="card tool-card">
+            <div class="tool-icon">📐</div>
+            <h3>تبدیل واحد سطح</h3>
+            <p>تبدیل هکتار به مترمربع برای محاسبات اولیه مزرعه و باغ.</p>
+
+            <div class="field-group">
+              <label for="hectareValue">مساحت (هکتار)</label>
+              <input class="field" id="hectareValue" type="number" min="0.0001" step="any" placeholder="مثلاً 1.5">
+            </div>
+
+            <button class="btn btn-primary" id="areaBtn" type="button">تبدیل واحد</button>
+            <div class="result" id="areaResult" aria-live="polite">نتیجه تبدیل اینجا نمایش داده می‌شود.</div>
+            <span class="field-hint">هر هکتار برابر با ۱۰٬۰۰۰ مترمربع است.</span>
           </div>
         </div>
 
         <div class="notice">
-          این نسخه، هسته فرانت‌اند است. حساب کاربری و داده‌های خصوصی
-          در مرحله اتصال به Backend به Supabase منتقل خواهند شد.
+          <strong>محدودیت علمی ابزارها:</strong>
+          محاسبه آب، حجم متناظر با عمق واردشده را نشان می‌دهد و به‌تنهایی نیاز آبی محصول را تعیین نمی‌کند.
+          محاسبه کود نیز فقط در صورتی معتبر است که درصد درج‌شده دقیقاً مربوط به همان ماده غذایی هدف باشد.
+          شکل شیمیایی، تلفات، روش مصرف، شرایط خاک و نیاز واقعی گیاه باید جداگانه بررسی شوند.
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section id="knowledge">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>دانش کشاورزی</h2>
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">AGRICULTURAL SERVICES</div>
+          <h2>حوزه‌های خدمات تخصصی</h2>
           <p>
-            محتوای ساختاریافته برای یادگیری، تصمیم‌گیری و استفاده عملی.
+            محورهای هدف فعالیت جام‌کِشت؛ ارائه و سفارش آنلاین خدمات
+            پس از ایجاد زیرساخت اجرایی و تأیید مسیر ارتباطی فعال خواهد شد.
           </p>
         </div>
-      </div>
 
-      <div class="search-box">
-        <input id="searchInput" class="input"
-               placeholder="جست‌وجو در پسته، باغبانی، گلخانه، خاک، آب، آفات...">
-      </div>
+        <div class="grid grid-2">
+          <div class="card service-list">
+            <div class="service-item">
+              <span class="service-number">۰۱</span>
+              <div>
+                <strong>مشاوره باغبانی و درختان میوه</strong>
+                <span>ارزیابی شرایط باغ، مدیریت تغذیه، آبیاری و تنش‌های محیطی.</span>
+              </div>
+            </div>
 
-      <div id="articles" class="grid grid-3"></div>
+            <div class="service-item">
+              <span class="service-number">۰۲</span>
+              <div>
+                <strong>مدیریت باغ پسته</strong>
+                <span>بررسی شرایط خاک و آب، مدیریت تغذیه و پایش عملیات باغ.</span>
+              </div>
+            </div>
 
-    </div>
-  </section>
+            <div class="service-item">
+              <span class="service-number">۰۳</span>
+              <div>
+                <strong>خاک، آب و تغذیه گیاه</strong>
+                <span>کمک به تفسیر نتایج آزمایش با توجه به واحدها و شرایط نمونه‌برداری.</span>
+              </div>
+            </div>
 
-  <section id="categories">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>حوزه‌های تخصصی</h2>
-          <p>ساختار اصلی دانش و خدمات JAMINTRA.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-4">
-
-        <div class="card">
-          <div class="icon">🌳</div>
-          <h3>باغبانی</h3>
-          <p>تولید، تغذیه، مدیریت باغ و پس از برداشت.</p>
-          <span class="tag">Fruit Trees</span>
-          <span class="tag">Horticulture</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">🥜</div>
-          <h3>پسته</h3>
-          <p>مدیریت باغ، تغذیه، تنش، برداشت و پس از برداشت.</p>
-          <span class="tag">Pistachio</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">🌸</div>
-          <h3>زعفران</h3>
-          <p>تولید، مدیریت مزرعه و فناوری پس از برداشت.</p>
-          <span class="tag">Saffron</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">🏡</div>
-          <h3>گلخانه</h3>
-          <p>اقلیم، آبیاری، تغذیه، پایش و اتوماسیون.</p>
-          <span class="tag">Greenhouse</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">💧</div>
-          <h3>خاک و آب</h3>
-          <p>آبیاری، کیفیت آب، خاک و مدیریت منابع.</p>
-          <span class="tag">Soil</span>
-          <span class="tag">Water</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">🦠</div>
-          <h3>آفات و بیماری‌ها</h3>
-          <p>تشخیص، پایش و تصمیم‌یار مدیریت مزرعه.</p>
-          <span class="tag">Plant Health</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">🤖</div>
-          <h3>AI در کشاورزی</h3>
-          <p>RAG، بینایی ماشین، پیش‌بینی و تصمیم‌یار.</p>
-          <span class="tag">AI</span>
-          <span class="tag">RAG</span>
-        </div>
-
-        <div class="card">
-          <div class="icon">📡</div>
-          <h3>کشاورزی دیجیتال</h3>
-          <p>GIS، IoT، داده و Farm Management.</p>
-          <span class="tag">GIS</span>
-          <span class="tag">IoT</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="tools">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>ابزارهای هوشمند</h2>
-          <p>محاسبات اولیه برای تصمیم‌گیری سریع. ابزارها بعداً با داده واقعی توسعه می‌یابند.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-3">
-
-        <div class="card tool">
-          <h3>💧 محاسبه حجم آبیاری</h3>
-          <p>مساحت و عمق آبیاری را وارد کنید.</p>
-
-          <label>
-            مساحت زمین (هکتار)
-            <input class="input" id="areaHa" type="number" min="0" step="0.01" placeholder="مثلاً 2">
-          </label>
-
-          <label>
-            عمق خالص آب (میلی‌متر)
-            <input class="input" id="waterMm" type="number" min="0" step="1" placeholder="مثلاً 30">
-          </label>
-
-          <button class="btn primary" onclick="calcWater()">محاسبه</button>
-
-          <div class="result" id="waterResult">نتیجه اینجا نمایش داده می‌شود.</div>
-        </div>
-
-        <div class="card tool">
-          <h3>🌱 محاسبه کود</h3>
-          <p>برای محاسبه ساده ماده مؤثره.</p>
-
-          <label>
-            نیاز ماده مؤثره (کیلوگرم)
-            <input class="input" id="nutrientKg" type="number" min="0" step="0.1" placeholder="مثلاً 25">
-          </label>
-
-          <label>
-            درصد ماده مؤثره کود
-            <input class="input" id="fertPercent" type="number" min="0.1" max="100" step="0.1" placeholder="مثلاً 20">
-          </label>
-
-          <button class="btn primary" onclick="calcFertilizer()">محاسبه</button>
-
-          <div class="result" id="fertResult">نتیجه اینجا نمایش داده می‌شود.</div>
-        </div>
-
-        <div class="card tool">
-          <h3>📐 تبدیل هکتار به مترمربع</h3>
-          <p>تبدیل سریع واحد سطح.</p>
-
-          <label>
-            مساحت (هکتار)
-            <input class="input" id="haConvert" type="number" min="0" step="0.01" placeholder="مثلاً 3">
-          </label>
-
-          <button class="btn primary" onclick="convertArea()">تبدیل</button>
-
-          <div class="result" id="areaResult">نتیجه اینجا نمایش داده می‌شود.</div>
-        </div>
-
-      </div>
-
-      <div class="notice">
-        ⚠️ این ماشین‌حساب‌ها ابزار محاسباتی هستند و جایگزین آزمایش خاک،
-        آزمایش آب، نسخه کارشناسی یا توصیه اختصاصی مزرعه نیستند.
-      </div>
-
-    </div>
-  </section>
-
-  <section id="ai">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>Agri AI Assistant</h2>
-          <p>
-            رابط اولیه دستیار کشاورزی JAMINTRA؛ در نسخه بعد به RAG و
-            پایگاه دانش معتبر متصل می‌شود.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-
-        <div id="chat" class="chat">
-          <div class="bubble ai">
-            سلام. من دستیار اولیه JAMINTRA هستم.
-            موضوع کشاورزی خود را بنویسید؛ مثلاً «آبیاری پسته» یا
-            «مدیریت گلخانه».
-          </div>
-        </div>
-
-        <div class="chat-input">
-          <input id="chatInput" class="input"
-                 placeholder="سؤال کشاورزی خود را بنویسید...">
-          <button class="btn primary" onclick="askAI()">ارسال</button>
-        </div>
-
-        <div class="notice">
-          این نسخه هنوز به مدل زبانی یا RAG متصل نیست و پاسخ تولیدشده
-          صرفاً راهنمای اولیه رابط کاربری است. API Key نباید داخل
-          این فایل قرار داده شود.
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="profile">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>پروفایل و Farm OS</h2>
-          <p>
-            هسته اولیه پرونده کاربر و مزرعه. فعلاً اطلاعات در همین مرورگر
-            ذخیره می‌شود؛ در نسخه Backend به حساب کاربری واقعی متصل خواهد شد.
-          </p>
-        </div>
-      </div>
-
-      <div class="profile">
-
-        <div class="card">
-
-          <div class="profile-top">
-            <div class="avatar" id="avatar">ع</div>
-            <div>
-              <h3 id="profileName">کاربر JAMINTRA</h3>
-              <div class="status" id="profileStatus">
-                حساب محلی — آماده تکمیل
+            <div class="service-item">
+              <span class="service-number">۰۴</span>
+              <div>
+                <strong>گلخانه و کشاورزی هوشمند</strong>
+                <span>پایش محیط، ثبت داده و بررسی راهکارهای فناوری در تولید.</span>
               </div>
             </div>
           </div>
 
-          <hr style="border-color:var(--line);border-width:1px 0 0;margin:18px 0">
+          <div class="card">
+            <h3>برای بررسی یک مسئله کشاورزی چه اطلاعاتی لازم است؟</h3>
+            <p>هرچه اطلاعات اولیه دقیق‌تر باشد، احتمال خطا در ارزیابی کمتر می‌شود.</p>
 
-          <label>
-            نام
-            <input id="nameInput" class="input" placeholder="نام شما">
-          </label>
+            <div class="service-list">
+              <div class="service-item">
+                <span class="service-number">۱</span>
+                <div>
+                  <strong>مشخصات محصول</strong>
+                  <span>گونه، رقم، سن درخت و مرحله رشد.</span>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-number">۲</span>
+                <div>
+                  <strong>موقعیت و شرایط تولید</strong>
+                  <span>منطقه، مساحت، نوع خاک و روش آبیاری.</span>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-number">۳</span>
+                <div>
+                  <strong>شواهد و سوابق</strong>
+                  <span>تصاویر، سابقه مصرف نهاده و نتایج آزمایش.</span>
+                </div>
+              </div>
+            </div>
 
-          <br>
-
-          <label>
-            ایمیل
-            <input id="emailInput" class="input" type="email" placeholder="email@example.com">
-          </label>
-
-          <br>
-
-          <button class="btn primary" onclick="saveProfile()">
-            ذخیره پروفایل
-          </button>
-
+            <a class="btn btn-outline" href="#request">شرح مسئله و درخواست مشاوره</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-
-          <h3>🌾 مزارع من</h3>
-          <p>یک پرونده ساده برای ثبت زمین‌ها.</p>
-
-          <div class="grid grid-2">
-
-            <input id="farmName" class="input" placeholder="نام مزرعه">
-            <input id="farmCrop" class="input" placeholder="محصول">
-
+    <section id="ai">
+      <div class="container">
+        <div class="feature-banner">
+          <div>
+            <div class="section-kicker" style="color:#d5e3b6">AGRICULTURE + AI</div>
+            <h2>مسیر توسعه هوش مصنوعی کشاورزی</h2>
+            <p>
+              هدف بلندمدت جام‌کِشت، توسعه ابزارهای هوشمند مبتنی بر منابع معتبر،
+              داده‌های واقعی مزرعه و ارزیابی متخصصان است. خروجی هوش مصنوعی
+              باید همراه با محدودیت‌ها و میزان اطمینان ارائه شود.
+            </p>
           </div>
 
-          <br>
-
-          <button class="btn primary" onclick="addFarm()">
-            افزودن مزرعه
-          </button>
-
-          <div id="farmList" style="margin-top:15px"></div>
-
+          <div class="feature-points">
+            <div class="feature-point"><strong>01</strong>پایگاه دانش مستند</div>
+            <div class="feature-point"><strong>02</strong>تحلیل اطلاعات مزرعه</div>
+            <div class="feature-point"><strong>03</strong>پایش تصویر گیاه</div>
+            <div class="feature-point"><strong>04</strong>تصمیم‌یار تخصصی</div>
+          </div>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>خدمات کشاورزی</h2>
-          <p>ساختار خدمات تخصصی قابل توسعه برای JAMINTRA.</p>
+        <div class="notice notice-danger">
+          <strong>وضعیت فعلی:</strong>
+          هیچ مدل هوش مصنوعی، API، پایگاه داده یا دستیار آنلاین به این نسخه متصل نیست.
+          این قسمت معرفی برنامه توسعه است، نه قابلیت فعال سایت.
+          کلیدهای API در آینده باید فقط در سمت سرور نگهداری شوند.
         </div>
       </div>
+    </section>
 
-      <div class="grid grid-3">
-
-        <div class="card">
-          <div class="icon">🌳</div>
-          <h3>مشاوره باغ و پسته</h3>
+    <section id="references" style="background:var(--paper-soft)">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">SCIENTIFIC REFERENCES</div>
+          <h2>منابع علمی و مراجع معتبر</h2>
           <p>
-            بررسی مسئله، تحلیل شرایط و طراحی برنامه مدیریتی
-            متناسب با اطلاعات مزرعه.
+            برای یادگیری و بررسی علمی، اولویت با منابع اصلی و سازمان‌های معتبر است.
+            لینک یک منبع به معنی تأیید همه توصیه‌های آن برای هر منطقه نیست.
           </p>
-          <a class="btn" href="#request">درخواست خدمت</a>
         </div>
 
-        <div class="card">
-          <div class="icon">💧</div>
-          <h3>خاک و آب</h3>
-          <p>
-            ساختار ثبت اطلاعات آزمایش خاک و آب و تبدیل نتایج
-            به توصیه‌های قابل استفاده.
-          </p>
-          <a class="btn" href="#request">درخواست خدمت</a>
+        <div class="grid grid-3">
+          <article class="card source-card">
+            <span class="source-type">FAO · سازمان ملل متحد</span>
+            <h3>مدیریت آب و آبیاری</h3>
+            <p>منابع سازمان خواربار و کشاورزی ملل متحد درباره مدیریت آب، آبیاری و کشاورزی.</p>
+            <a class="btn btn-outline" href="https://www.fao.org/land-water/en/" target="_blank" rel="noopener noreferrer">ورود به FAO</a>
+          </article>
+
+          <article class="card source-card">
+            <span class="source-type">FAO · پایگاه پژوهشی</span>
+            <h3>FAO AGRIS</h3>
+            <p>جست‌وجوی فراداده و اطلاعات کتاب‌شناختی پژوهش‌های کشاورزی و غذا.</p>
+            <a class="btn btn-outline" href="https://agris.fao.org/" target="_blank" rel="noopener noreferrer">ورود به AGRIS</a>
+          </article>
+
+          <article class="card source-card">
+            <span class="source-type">FAO · روش‌های محاسباتی</span>
+            <h3>راهنمای FAO 56</h3>
+            <p>مرجع روش‌شناختی شناخته‌شده برای محاسبه تبخیر و تعرق گیاه و نیاز آبی.</p>
+            <a class="btn btn-outline" href="https://www.fao.org/4/x0490e/x0490e00.htm" target="_blank" rel="noopener noreferrer">مشاهده مرجع</a>
+          </article>
+
+          <article class="card source-card">
+            <span class="source-type">University of California</span>
+            <h3>مدیریت و حفاظت گیاه</h3>
+            <p>اطلاعات آموزشی و فنی درباره مدیریت آفات و بیماری‌های گیاهی.</p>
+            <a class="btn btn-outline" href="https://ipm.ucanr.edu/" target="_blank" rel="noopener noreferrer">ورود به UC IPM</a>
+          </article>
+
+          <article class="card source-card">
+            <span class="source-type">FAO · داده و اطلاعات</span>
+            <h3>دانش و اطلاعات کشاورزی</h3>
+            <p>دسترسی به منابع و سامانه‌های اطلاعاتی سازمان FAO.</p>
+            <a class="btn btn-outline" href="https://www.fao.org/" target="_blank" rel="noopener noreferrer">وب‌سایت FAO</a>
+          </article>
+
+          <article class="card source-card">
+            <span class="source-type">UC Agriculture</span>
+            <h3>اطلاعات تخصصی پسته</h3>
+            <p>منابع دانشگاهی برای مطالعه مدیریت و تولید پسته؛ توصیه‌ها باید با شرایط ایران تطبیق داده شوند.</p>
+            <a class="btn btn-outline" href="https://ucanr.edu/" target="_blank" rel="noopener noreferrer">ورود به UC ANR</a>
+          </article>
         </div>
 
-        <div class="card">
-          <div class="icon">🤖</div>
-          <h3>کشاورزی هوشمند</h3>
-          <p>
-            طراحی مسیر استفاده از AI، داده، GIS، IoT و
-            سیستم‌های تصمیم‌یار.
-          </p>
-          <a class="btn" href="#request">درخواست خدمت</a>
+        <div class="notice">
+          <strong>سیاست محتوایی جام‌کِشت:</strong>
+          مطالب تخصصی باید منبع، تاریخ بازبینی، نویسنده یا بازبین،
+          محدوده کاربرد و محدودیت توصیه را مشخص کنند.
+          مطالب فاقد پشتوانه علمی نباید به‌عنوان دستورالعمل اجرایی معرفی شوند.
         </div>
-
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section id="request">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>درخواست خدمت</h2>
-          <p>اطلاعات مسئله خود را ثبت کنید.</p>
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">ABOUT JAMKESHT</div>
+          <h2>درباره جام‌کِشت</h2>
+          <p>پیوند دانش دانشگاهی، تجربه میدانی و فناوری‌های نوین کشاورزی.</p>
         </div>
-      </div>
-
-      <div class="card">
 
         <div class="grid grid-2">
+          <div class="card">
+            <div class="founder-card">
+              <div class="founder-avatar">ع</div>
+              <div>
+                <span class="field-hint">بنیان‌گذار و مدیر پروژه</span>
+                <h3>عارف زیبایی‌راد</h3>
+                <p>کارشناس ارشد علوم و مهندسی باغبانی، گرایش درختان میوه</p>
+              </div>
+            </div>
 
-          <label>
-            نام
-            <input id="reqName" class="input" placeholder="نام و نام خانوادگی">
-          </label>
+            <p style="margin-top:18px">
+              علاقه‌مند به توسعه خدمات مشاوره‌ای، دانش کاربردی باغبانی،
+              فناوری پس از برداشت و راهکارهای دیجیتال در کشاورزی.
+            </p>
+            <p>
+              خاستگاه اولیه پروژه تربت‌جام در استان خراسان رضوی است؛
+              با نگاه توسعه خدمات و دانش کشاورزی در سطح ایران.
+            </p>
+          </div>
 
-          <label>
-            نوع خدمت
-            <select id="reqService">
-              <option>مشاوره باغ و پسته</option>
-              <option>خاک و آب</option>
-              <option>گلخانه</option>
-              <option>کشاورزی هوشمند و AI</option>
-              <option>تحقیق و توسعه</option>
-            </select>
-          </label>
+          <div class="card">
+            <h3>مأموریت و چشم‌انداز</h3>
+            <p><strong>مأموریت:</strong> کمک به تصمیم‌گیری بهتر در کشاورزی با اطلاعات معتبر، ابزارهای کاربردی و ارتباط میان کشاورزان و متخصصان.</p>
+            <p><strong>چشم‌انداز:</strong> ایجاد زیرساخت دیجیتال قابل توسعه برای باغبانی و کشاورزی هوشمند.</p>
+            <p><strong>ارزش‌ها:</strong> صداقت علمی، شفافیت، امنیت داده، مسئولیت‌پذیری و توجه به شرایط واقعی مزرعه.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="roadmap" style="background:var(--paper-soft)">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">DEVELOPMENT ROADMAP</div>
+          <h2>نقشه راه توسعه</h2>
+          <p>قابلیت‌های آینده به‌عنوان برنامه توسعه معرفی می‌شوند، نه امکانات فعال فعلی.</p>
         </div>
 
+        <div class="grid grid-4">
+          <div class="card roadmap-step">
+            <small>PHASE 01 · پایه</small>
+            <h3>وب‌سایت و دانش</h3>
+            <p>هویت برند، محتوای تخصصی، منابع و ابزارهای پایه.</p>
+          </div>
+
+          <div class="card roadmap-step">
+            <small>PHASE 02 · خدمات</small>
+            <h3>پروفایل و درخواست</h3>
+            <p>ثبت‌نام، پروفایل کشاورز و کارشناس و پیگیری خدمات.</p>
+          </div>
+
+          <div class="card roadmap-step">
+            <small>PHASE 03 · داده</small>
+            <h3>زیرساخت هوشمند</h3>
+            <p>پایگاه داده، پنل مدیریت، ثبت اطلاعات مزرعه و امنیت.</p>
+          </div>
+
+          <div class="card roadmap-step">
+            <small>PHASE 04 · AI</small>
+            <h3>دستیار تخصصی</h3>
+            <p>بازیابی منابع علمی و ابزارهای تصمیم‌یار با ارزیابی انسانی.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="request">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">SERVICE REQUEST</div>
+          <h2>شرح مسئله و درخواست مشاوره</h2>
+          <p>
+            اطلاعات اولیه را وارد کن تا متن منظمی برای نگهداری یا ارسال به کارشناس بسازی.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <form id="requestForm" class="form-grid">
+              <div class="field-group">
+                <label for="reqName">نام و نام خانوادگی</label>
+                <input class="field" id="reqName" type="text" required maxlength="100">
+              </div>
+
+              <div class="field-group">
+                <label for="reqPhone">شماره تماس (اختیاری)</label>
+                <input class="field" id="reqPhone" type="tel" maxlength="30">
+              </div>
+
+              <div class="field-group">
+                <label for="reqCity">شهر یا منطقه</label>
+                <input class="field" id="reqCity" type="text" required maxlength="100">
+              </div>
+
+              <div class="field-group">
+                <label for="reqCrop">محصول یا فعالیت</label>
+                <select class="field" id="reqCrop" required>
+                  <option value="">انتخاب کنید</option>
+                  <option>پسته</option>
+                  <option>زعفران</option>
+                  <option>سایر درختان میوه</option>
+                  <option>گلخانه</option>
+                  <option>زراعت</option>
+                  <option>سایر</option>
+                </select>
+              </div>
+
+              <div class="field-group full">
+                <label for="reqSubject">موضوع درخواست</label>
+                <select class="field" id="reqSubject" required>
+                  <option value="">انتخاب کنید</option>
+                  <option>تغذیه و کوددهی</option>
+                  <option>آبیاری و مدیریت آب</option>
+                  <option>آفات و بیماری‌ها</option>
+                  <option>آزمایش خاک و آب</option>
+                  <option>احداث و مدیریت باغ</option>
+                  <option>گلخانه</option>
+                  <option>فناوری پس از برداشت</option>
+                  <option>سایر</option>
+                </select>
+              </div>
+
+              <div class="field-group full">
+                <label for="reqDetails">شرح مسئله و اطلاعات تکمیلی</label>
+                <textarea class="field" id="reqDetails" required maxlength="4000"
+                  placeholder="نوع محصول، سن درخت، منطقه، علائم، سابقه آبیاری یا کوددهی و اطلاعات آزمایش را بنویسید..."></textarea>
+              </div>
+
+              <div class="full">
+                <button class="btn btn-primary" type="submit">ساخت متن درخواست</button>
+              </div>
+            </form>
+
+            <p class="form-status" id="requestStatus" aria-live="polite"></p>
+          </div>
+
+          <div class="card">
+            <div class="tool-icon">📝</div>
+            <h3>متن آماده درخواست</h3>
+            <p>پس از تکمیل فرم، متن ساخته‌شده را بررسی و سپس کپی یا ذخیره کن.</p>
+
+            <textarea class="field" id="requestOutput" readonly
+              placeholder="متن درخواست پس از تکمیل فرم اینجا نمایش داده می‌شود."></textarea>
+
+            <div class="hero-actions" style="margin-top:12px">
+              <button class="btn btn-outline" id="copyRequest" type="button">کپی متن</button>
+              <button class="btn btn-outline" id="downloadRequest" type="button">ذخیره فایل متنی</button>
+            </div>
+
+            <div class="notice notice-danger">
+              این فرم در نسخه فعلی اطلاعات را به سرور ارسال نمی‌کند و درخواست آنلاین ثبت نمی‌شود.
+              اطلاعات فقط در همین صفحه برای ساخت متن استفاده می‌شود.
+              پیش از ارسال، اطلاعات شخصی را بررسی کن.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">CONTACT & TRANSPARENCY</div>
+          <h2>ارتباط و شفافیت</h2>
+          <p>اطلاعات ارتباطی رسمی پس از ایجاد و تأیید کانال‌های ارتباطی منتشر خواهد شد.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>خاستگاه پروژه</h3>
+            <p>تربت‌جام، خراسان رضوی، ایران</p>
+            <p>تمرکز اولیه: باغبانی، پسته، زعفران، گلخانه و خدمات کشاورزی.</p>
+          </div>
+
+          <div class="card">
+            <h3>حریم خصوصی و امنیت</h3>
+            <p>
+              در این نسخه اطلاعات فرم به سرور ارسال یا در پایگاه داده ذخیره نمی‌شود.
+              برای راه‌اندازی خدمات آنلاین، باید سیاست حریم خصوصی،
+              سطح دسترسی و زیرساخت امن پیاده‌سازی شود.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>جام‌کِشت | JamKesht</h3>
+          <p>دانش، ابزار و فناوری برای کشاورزی آگاهانه‌تر.</p>
+          <p>خاستگاه پروژه: تربت‌جام، خراسان رضوی</p>
+        </div>
+
+        <div>
+          <h3>دسترسی سریع</h3>
+          <div class="footer-links">
+            <a href="#knowledge">مرکز دانش</a>
+            <a href="#tools">ابزارهای محاسباتی</a>
+            <a href="#services">خدمات</a>
+            <a href="#references">منابع علمی</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>اطلاعات پروژه</h3>
+          <div class="footer-links">
+            <a href="#about">درباره جام‌کِشت</a>
+            <a href="#roadmap">نقشه راه</a>
+            <a href="#request">درخواست مشاوره</a>
+            <a href="#contact">حریم خصوصی</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> JamKesht · تمامی حقوق محفوظ است.
         <br>
-
-        <label>
-          توضیح مسئله
-          <textarea id="reqText"
-                    placeholder="محصول، منطقه، سن باغ، مشکل، آزمایش‌ها و هر اطلاعات مرتبط را بنویسید..."></textarea>
-        </label>
-
-        <br>
-
-        <button class="btn primary" onclick="submitRequest()">
-          ثبت درخواست
-        </button>
-
-        <div id="requestResult" class="notice hidden"></div>
-
+        نسخه پایه وب‌سایت؛ در حال توسعه
       </div>
     </div>
-  </section>
-
-  <section id="research">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>پژوهش و تخصص</h2>
-          <p>مسیر علمی و تخصصی بنیان‌گذار JAMINTRA.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-2">
-
-        <div class="card">
-          <span class="tag">Founder / Researcher</span>
-          <h3>عارف زیبعی</h3>
-          <p>
-            زمینه‌های تخصصی و علاقه‌مندی:
-            علوم باغبانی، درختان میوه، پسته، زعفران،
-            گلخانه، پس از برداشت، داده و هوش مصنوعی در کشاورزی.
-          </p>
-
-          <div>
-            <span class="tag">Horticulture</span>
-            <span class="tag">Pistachio</span>
-            <span class="tag">Postharvest</span>
-            <span class="tag">AI</span>
-            <span class="tag">AgTech</span>
-          </div>
-        </div>
-
-        <div class="card">
-
-          <span class="tag">Publication</span>
-
-          <h3>
-            Edible coating / fresh pistachio research
-          </h3>
-
-          <p>
-            پژوهش مرتبط با پوشش خوراکی بر پایه موسیلاژ دانه بالنگ
-            و Lacticaseibacillus casei در پسته تازه.
-          </p>
-
-          <a class="btn"
-             href="https://doi.org/10.1038/s41598-023-51129-6"
-             target="_blank"
-             rel="noopener noreferrer">
-            مشاهده مقاله / DOI
-          </a>
-
-          <br><br>
-
-          <a class="btn"
-             href="https://doi.org/10.1016/j.micpath.2023.106177"
-             target="_blank"
-             rel="noopener noreferrer">
-            مقاله پژوهشی مرتبط
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="roadmap">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>مسیر توسعه JAMINTRA</h2>
-          <p>همین سایت به‌صورت تدریجی به یک پلتفرم کامل تبدیل می‌شود.</p>
-        </div>
-      </div>
-
-      <div class="card timeline">
-
-        <div class="step">
-          <div class="step-num">01</div>
-          <div>
-            <h3>Foundation</h3>
-            <p>وب‌سایت، دانش، ابزارها، خدمات و هویت دیجیتال.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-num">02</div>
-          <div>
-            <h3>Backend</h3>
-            <p>حساب کاربری، دیتابیس، Farm OS، فایل‌ها و داده‌های خصوصی.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-num">03</div>
-          <div>
-            <h3>AI + RAG</h3>
-            <p>دستیار تخصصی متصل به منابع علمی و دانش کشاورزی معتبر.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-num">04</div>
-          <div>
-            <h3>GIS + IoT</h3>
-            <p>موقعیت، سنجش، سنسورها، پایش مزرعه و داده‌های زمانی.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-num">05</div>
-          <div>
-            <h3>Marketplace</h3>
-            <p>خدمات، محصولات، متخصصان و زنجیره ارزش کشاورزی.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-
-      <div class="section-head">
-        <div>
-          <h2>درباره JAMINTRA</h2>
-          <p>یک پروژه بلندمدت برای اتصال کشاورزی با داده و فناوری.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-2">
-
-        <div class="card">
-          <h3>چرا JAMINTRA؟</h3>
-          <p>
-            هدف، ساخت یک سایت نمایشی دیگر نیست؛ هدف ایجاد زیرساختی است
-            که بتواند از محتوای آموزشی و خدمات تخصصی شروع کند و در ادامه
-            به سیستم مدیریت مزرعه، هوش مصنوعی، GIS، IoT و بازار خدمات
-            کشاورزی توسعه پیدا کند.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>اصل امنیت</h3>
-          <p>
-            اطلاعات حساس کاربران، کلیدهای API و دسترسی‌های مدیریتی
-            نباید در کد عمومی GitHub قرار بگیرند. Backend و سیاست‌های
-            دسترسی باید جداگانه پیاده‌سازی شوند.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container footer-grid">
-
-    <div>
-      <div class="brand">
-        <span class="brand-mark">J</span>
-        <span>
-          JAMINTRA
-          <small>AGRICULTURE • DATA • AI • TECHNOLOGY</small>
-        </span>
-      </div>
-
-      <p class="small">
-        Agriculture • Data • AI • Technology
-      </p>
-    </div>
-
-    <div>
-      <p class="small">
-        © <span id="year"></span> JAMINTRA. All rights reserved.
-      </p>
-
-      <p class="small">
-        نسخه فعلی: Frontend Foundation
-      </p>
-    </div>
-
-  </div>
-</footer>
-
-<script>
-  "use strict";
-
-  /* =========================================================
-     JAMINTRA FRONTEND FOUNDATION
-     No secrets / no private API keys in this file.
-     ========================================================= */
-
-  const STORAGE = {
-    profile: "jamintra_profile_v1",
-    farms: "jamintra_farms_v1",
-    requests: "jamintra_requests_v1"
-  };
-
-  const articlesData = [
-    {
-      title:"مدیریت باغ پسته",
-      category:"پسته",
-      text:"اصول مدیریت باغ، پایش وضعیت درخت، تغذیه، آبیاری و تصمیم‌گیری داده‌محور.",
-      tags:["پسته","باغبانی","مدیریت"]
-    },
-    {
-      title:"اصول مدیریت آب در کشاورزی",
-      category:"خاک و آب",
-      text:"مفاهیم پایه حجم آب، راندمان، نیاز آبی و اهمیت داده‌های واقعی مزرعه.",
-      tags:["آبیاری","آب","خاک"]
-    },
-    {
-      title:"مبانی کشاورزی هوشمند",
-      category:"AI",
-      text:"آشنایی با سنسورها، داده، GIS، IoT، یادگیری ماشین و سیستم‌های تصمیم‌یار.",
-      tags:["AI","IoT","GIS"]
-    },
-    {
-      title:"مبانی گلخانه هوشمند",
-      category:"گلخانه",
-      text:"کنترل اقلیم، آبیاری، تغذیه و جمع‌آوری داده برای مدیریت بهتر گلخانه.",
-      tags:["گلخانه","اقلیم","داده"]
-    },
-    {
-      title:"پس از برداشت محصولات باغبانی",
-      category:"پس از برداشت",
-      text:"اصول کاهش افت کیفیت، نگهداری و استفاده از فناوری در زنجیره پس از برداشت.",
-      tags:["پس از برداشت","کیفیت"]
-    },
-    {
-      title:"هوش مصنوعی و RAG در کشاورزی",
-      category:"AI",
-      text:"چگونه یک دستیار کشاورزی می‌تواند به منابع علمی معتبر و دانش تخصصی متصل شود.",
-      tags:["RAG","LLM","Knowledge"]
-    },
-    {
-      title:"مدیریت خاک و اهمیت آزمایش",
-      category:"خاک",
-      text:"چرا تصمیم‌گیری تغذیه‌ای باید بر پایه اطلاعات واقعی خاک و آب انجام شود.",
-      tags:["خاک","آزمایش","تغذیه"]
-    },
-    {
-      title:"زعفران و مدیریت مزرعه",
-      category:"زعفران",
-      text:"ساختار اولیه دانش برای تولید، مدیریت و ثبت داده‌های مزرعه زعفران.",
-      tags:["زعفران","مزرعه"]
-    },
-    {
-      title:"بینایی ماشین در تشخیص گیاه",
-      category:"AI",
-      text:"کاربرد تصاویر و مدل‌های بینایی برای پایش سلامت گیاه و تشخیص علائم.",
-      tags:["Vision","AI","Plant Health"]
-    }
-  ];
-
-  const $ = id => document.getElementById(id);
-
-  function renderArticles(list = articlesData){
-    const root = $("articles");
-
-    if(!list.length){
-      root.innerHTML = '<div class="empty">موردی پیدا نشد.</div>';
-      return;
-    }
-
-    root.innerHTML = list.map(article => `
-      <article class="card article">
-        <span class="tag">${escapeHTML(article.category)}</span>
-        <h3>${escapeHTML(article.title)}</h3>
-        <p>${escapeHTML(article.text)}</p>
-        <div>
-          ${article.tags.map(t => `<span class="tag">${escapeHTML(t)}</span>`).join("")}
-        </div>
-        <span class="more">مطالعه و توسعه محتوا ←</span>
-      </article>
-    `).join("");
-  }
-
-  function escapeHTML(value){
-    return String(value)
-      .replaceAll("&","&amp;")
-      .replaceAll("<","&lt;")
-      .replaceAll(">","&gt;")
-      .replaceAll('"',"&quot;")
-      .replaceAll("'","&#039;");
-  }
-
-  $("searchInput").addEventListener("input", function(){
-    const q = this.value.trim().toLowerCase();
-
-    if(!q){
-      renderArticles();
-      return;
-    }
-
-    const result = articlesData.filter(a =>
-      [a.title,a.category,a.text,...a.tags]
-        .join(" ")
-        .toLowerCase()
-        .includes(q)
-    );
-
-    renderArticles(result);
-  });
-
-  function calcWater(){
-    const area = Number($("areaHa").value);
-    const mm = Number($("waterMm").value);
-
-    if(area <= 0 || mm <= 0){
-      $("waterResult").textContent = "مقادیر معتبر وارد کنید.";
-      return;
-    }
-
-    /*
-      1 hectare × 1 mm = 10 m³
-    */
-    const volume = area * mm * 10;
-
-    $("waterResult").textContent =
-      `حجم خالص تقریبی: ${volume.toLocaleString("fa-IR")} مترمکعب`;
-  }
-
-  function calcFertilizer(){
-    const nutrient = Number($("nutrientKg").value);
-    const percent = Number($("fertPercent").value);
-
-    if(nutrient <= 0 || percent <= 0 || percent > 100){
-      $("fertResult").textContent = "مقادیر معتبر وارد کنید.";
-      return;
-    }
-
-    const fertilizer = nutrient / (percent / 100);
-
-    $("fertResult").textContent =
-      `مقدار کود تقریبی: ${fertilizer.toLocaleString("fa-IR",{maximumFractionDigits:2})} کیلوگرم`;
-  }
-
-  function convertArea(){
-    const ha = Number($("haConvert").value);
-
-    if(ha < 0 || !Number.isFinite(ha)){
-      $("areaResult").textContent = "مقدار معتبر وارد کنید.";
-      return;
-    }
-
-    const m2 = ha * 10000;
-
-    $("areaResult").textContent =
-      `${m2.toLocaleString("fa-IR")} مترمربع`;
-  }
-
-  function addChat(text,type){
-    const bubble = document.createElement("div");
-    bubble.className = `bubble ${type}`;
-    bubble.textContent = text;
-
-    $("chat").appendChild(bubble);
-    $("chat").scrollTop = $("chat").scrollHeight;
-  }
-
-  function askAI(){
-    const input = $("chatInput");
-    const question = input.value.trim();
-
-    if(!question) return;
-
-    addChat(question,"user");
-    input.value = "";
-
-    setTimeout(() => {
-
-      let answer =
-        "برای پاسخ تخصصی باید اطلاعات مزرعه، منطقه، محصول، مرحله رشد، خاک، آب و هدف مدیریتی مشخص باشد. در نسخه بعدی این بخش به پایگاه دانش معتبر JAMINTRA و مدل AI متصل می‌شود.";
-
-      const q = question.toLowerCase();
-
-      if(q.includes("پسته")){
-        answer =
-          "برای مسئله پسته، حداقل اطلاعات مورد نیاز شامل سن باغ، رقم، منطقه، نوع خاک، کیفیت آب، وضعیت آبیاری، علائم مشاهده‌شده و نتایج آزمایش خاک و آب است. بدون این داده‌ها توصیه اختصاصی قابل اتکا نیست.";
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const $ = (id) => document.getElementById(id);
+
+      // منوی موبایل
+      const menuBtn = $("menuBtn");
+      const navLinks = $("navLinks");
+
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener("click", function () {
+          const isOpen = navLinks.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", String(isOpen));
+          menuBtn.textContent = isOpen ? "✕" : "☰";
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.textContent = "☰";
+          });
+        });
       }
 
-      if(q.includes("گلخانه")){
-        answer =
-          "برای تحلیل گلخانه، نوع سازه، محصول، مرحله رشد، دما، رطوبت نسبی، EC، pH، برنامه آبیاری و تهویه از داده‌های کلیدی هستند.";
+      // سال جاری
+      const year = $("year");
+      if (year) {
+        year.textContent = new Date().getFullYear();
       }
 
-      if(q.includes("آبیاری") || q.includes("آب")){
-        answer =
-          "برای طراحی آبیاری باید مساحت، محصول، مرحله رشد، روش آبیاری، دبی، راندمان سیستم، نوع خاک و داده‌های اقلیمی بررسی شود. ماشین‌حساب اولیه آب در بخش ابزارها نیز در دسترس است.";
-      }
-
-      addChat(answer,"ai");
-
-    },450);
-  }
-
-  $("chatInput").addEventListener("keydown",function(e){
-    if(e.key === "Enter") askAI();
-  });
-
-  function loadProfile(){
-    try{
-      const data = JSON.parse(localStorage.getItem(STORAGE.profile) || "null");
-
-      if(data){
-        $("nameInput").value = data.name || "";
-        $("emailInput").value = data.email || "";
-
-        if(data.name){
-          $("profileName").textContent = data.name;
-          $("avatar").textContent = data.name.trim().charAt(0);
-          $("profileStatus").textContent = "پروفایل محلی ذخیره شده";
-        }
-      }
-    }catch(e){}
-  }
-
-  function saveProfile(){
-    const name = $("nameInput").value.trim();
-    const email = $("emailInput").value.trim();
-
-    const data = {name,email};
-
-    localStorage.setItem(STORAGE.profile,JSON.stringify(data));
-
-    $("profileName").textContent = name || "کاربر JAMINTRA";
-    $("avatar").textContent = name ? name.charAt(0) : "ع";
-    $("profileStatus").textContent = "پروفایل محلی ذخیره شد";
-
-    alert("پروفایل در این مرورگر ذخیره شد.");
-  }
-
-  function getFarms(){
-    try{
-      return JSON.parse(localStorage.getItem(STORAGE.farms) || "[]");
-    }catch(e){
-      return [];
-    }
-  }
-
-  function saveFarms(farms){
-    localStorage.setItem(STORAGE.farms,JSON.stringify(farms));
-  }
-
-  function renderFarms(){
-    const farms = getFarms();
-
-    if(!farms.length){
-      $("farmList").innerHTML =
-        '<div class="empty">هنوز مزرعه‌ای ثبت نشده است.</div>';
-      return;
-    }
-
-    $("farmList").innerHTML = farms.map((farm,index)=>`
-      <div class="farm-item">
-        <div>
-          <strong>${escapeHTML(farm.name)}</strong>
-          <div class="small">${escapeHTML(farm.crop)}</div>
-        </div>
-        <button class="btn" onclick="deleteFarm(${index})">حذف</button>
-      </div>
-    `).join("");
-  }
-
-  function addFarm(){
-    const name = $("farmName").value.trim();
-    const crop = $("farmCrop").value.trim();
-
-    if(!name || !crop){
-      alert("نام مزرعه و محصول را وارد کنید.");
-      return;
-    }
-
-    const farms = getFarms();
-
-    farms.push({
-      name,
-      crop,
-      createdAt:new Date().toISOString()
-    });
-
-    saveFarms(farms);
-
-    $("farmName").value = "";
-    $("farmCrop").value = "";
-
-    renderFarms();
-  }
-
-  function deleteFarm(index){
-    const farms = getFarms();
-    farms.splice(index,1);
-    saveFarms(farms);
-    renderFarms();
-  }
-
-  function submitRequest(){
-    const name = $("reqName").value.trim();
-    const service = $("reqService").value;
-    const text = $("reqText").value.trim();
-
-    if(!name || !text){
-      alert("نام و توضیح مسئله را وارد کنید.");
-      return;
-    }
-
-    let requests = [];
-
-    try{
-      requests = JSON.parse(
-        localStorage.getItem(STORAGE.requests) || "[]"
+      // جست‌وجوی موضوعات
+      const search = $("resourceSearch");
+      const cards = Array.from(
+        document.querySelectorAll("#resourceGrid [data-search]")
       );
-    }catch(e){}
+      const noResource = $("noResource");
 
-    requests.push({
-      name,
-      service,
-      text,
-      createdAt:new Date().toISOString()
-    });
+      if (search) {
+        search.addEventListener("input", function () {
+          const query = search.value.trim().toLocaleLowerCase("fa");
+          let visible = 0;
 
-    localStorage.setItem(
-      STORAGE.requests,
-      JSON.stringify(requests)
-    );
+          cards.forEach(function (card) {
+            const content = (
+              card.textContent + " " + (card.dataset.search || "")
+            ).toLocaleLowerCase("fa");
 
-    const result = $("requestResult");
+            const matched = content.includes(query);
+            card.classList.toggle("hidden", !matched);
 
-    result.textContent =
-      "درخواست در این مرورگر ثبت شد. برای ارسال واقعی به پنل خدمات، Backend در مرحله بعد متصل می‌شود.";
+            if (matched) visible++;
+          });
 
-    result.classList.remove("hidden");
-  }
+          if (noResource) {
+            noResource.classList.toggle("hidden", visible !== 0);
+          }
+        });
+      }
 
-  $("menuBtn").addEventListener("click",()=>{
-    $("navLinks").classList.toggle("open");
-  });
+      // ابزار حجم آب
+      const waterBtn = $("waterBtn");
 
-  document.querySelectorAll(".nav-links a").forEach(link=>{
-    link.addEventListener("click",()=>{
-      $("navLinks").classList.remove("open");
-    });
-  });
+      if (waterBtn) {
+        waterBtn.addEventListener("click", function () {
+          const area = Number($("waterArea").value);
+          const depth = Number($("waterDepth").value);
+          const efficiency = Number($("waterEfficiency").value);
+          const output = $("waterResult");
 
-  $("year").textContent = new Date().getFullYear();
+          if (
+            !Number.isFinite(area) || area <= 0 ||
+            !Number.isFinite(depth) || depth <= 0 ||
+            !Number.isFinite(efficiency) ||
+            efficiency <= 0 || efficiency > 100
+          ) {
+            output.textContent =
+              "لطفاً مساحت، عمق آب و راندمان معتبر وارد کنید.";
+            return;
+          }
 
-  renderArticles();
-  loadProfile();
-  renderFarms();
-</script>
+          const netVolume = area * depth * 10;
+          const grossVolume = netVolume / (efficiency / 100);
 
+          output.textContent =
+            "حجم خالص: " +
+            netVolume.toLocaleString("fa-IR", { maximumFractionDigits: 2 }) +
+            " مترمکعب | حجم ناخالص: " +
+            grossVolume.toLocaleString("fa-IR", { maximumFractionDigits: 2 }) +
+            " مترمکعب";
+        });
+      }
+
+      // ابزار مقدار کود
+      const fertilizerBtn = $("fertilizerBtn");
+
+      if (fertilizerBtn) {
+        fertilizerBtn.addEventListener("click", function () {
+          const nutrient = Number($("nutrientAmount").value);
+          const percent = Number($("fertilizerPercent").value);
+          const output = $("fertilizerResult");
+
+          if (
+            !Number.isFinite(nutrient) || nutrient <= 0 ||
+            !Number.isFinite(percent) || percent <= 0 || percent > 100
+          ) {
+            output.textContent =
+              "مقدار ماده غذایی و درصد کود را به‌درستی وارد کنید.";
+            return;
+          }
+
+          const fertilizer = nutrient / (percent / 100);
+
+          output.textContent =
+            "مقدار نظری کود: " +
+            fertilizer.toLocaleString("fa-IR", { maximumFractionDigits: 2 }) +
+            " کیلوگرم";
+        });
+      }
+
+      // تبدیل هکتار به مترمربع
+      const areaBtn = $("areaBtn");
+
+      if (areaBtn) {
+        areaBtn.addEventListener("click", function () {
+          const hectare = Number($("hectareValue").value);
+          const output = $("areaResult");
+
+          if (!Number.isFinite(hectare) || hectare <= 0) {
+            output.textContent = "لطفاً مساحت معتبر وارد کنید.";
+            return;
+          }
+
+          const squareMeters = hectare * 10000;
+
+          output.textContent =
+            hectare.toLocaleString("fa-IR") +
+            " هکتار = " +
+            squareMeters.toLocaleString("fa-IR", {
+              maximumFractionDigits: 2
+            }) +
+            " مترمربع";
+        });
+      }
+
+      // ساخت متن درخواست
+      const requestForm = $("requestForm");
+      const requestOutput = $("requestOutput");
+      const requestStatus = $("requestStatus");
+
+      if (requestForm && requestOutput && requestStatus) {
+        requestForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = $("reqName").value.trim();
+          const phone = $("reqPhone").value.trim();
+          const city = $("reqCity").value.trim();
+          const crop = $("reqCrop").value;
+          const subject = $("reqSubject").value;
+          const details = $("reqDetails").value.trim();
+
+          if (!name || !city || !crop || !subject || !details) {
+            requestStatus.textContent =
+              "لطفاً تمام فیلدهای ضروری را تکمیل کنید.";
+            return;
+          }
+
+          const content =
+            "درخواست مشاوره کشاورزی - جام‌کِشت\n\n" +
+            "نام: " + name + "\n" +
+            "شماره تماس: " + (phone || "ثبت نشده") + "\n" +
+            "منطقه: " + city + "\n" +
+            "محصول یا فعالیت: " + crop + "\n" +
+            "موضوع درخواست: " + subject + "\n\n" +
+            "شرح مسئله:\n" + details + "\n\n" +
+            "این متن توسط فرم محلی وب‌سایت جام‌کِشت ساخته شده است.";
+
+          requestOutput.value = content;
+          requestStatus.textContent =
+            "متن درخواست ساخته شد. آن را بررسی و سپس کپی یا ذخیره کنید.";
+        });
+      }
+
+      // کپی متن درخواست
+      const copyBtn = $("copyRequest");
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", async function () {
+          const output = $("requestOutput");
+          const status = $("requestStatus");
+
+          if (!output.value.trim()) {
+            status.textContent =
+              "ابتدا فرم را تکمیل و متن درخواست را ایجاد کنید.";
+            return;
+          }
+
+          try {
+            if (!navigator.clipboard || !window.isSecureContext) {
+              throw new Error("Clipboard unavailable");
+            }
+
+            await navigator.clipboard.writeText(output.value);
+            status.textContent = "متن درخواست کپی شد.";
+          } catch (error) {
+            output.focus();
+            output.select();
+            status.textContent =
+              "متن انتخاب شد؛ گزینه Copy مرورگر را انتخاب کنید.";
+          }
+        });
+      }
+
+      // ذخیره فایل متنی
+      const downloadBtn = $("downloadRequest");
+
+      if (downloadBtn) {
+        downloadBtn.addEventListener("click", function () {
+          const content = $("requestOutput").value;
+
+          if (!content.trim()) {
+            $("requestStatus").textContent =
+              "ابتدا متن درخواست را ایجاد کنید.";
+            return;
+          }
+
+          const blob = new Blob(
+            ["\uFEFF" + content],
+            { type: "text/plain;charset=utf-8" }
+          );
+
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+
+          link.href = url;
+          link.download = "jamkesht-service-request.txt";
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+
+          window.setTimeout(function () {
+            URL.revokeObjectURL(url);
+          }, 1500);
+
+          $("requestStatus").textContent =
+            "درخواست ذخیره شد یا برای ذخیره‌سازی آماده شد.";
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
